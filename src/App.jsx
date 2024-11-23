@@ -7,7 +7,7 @@ import Curriculum from "./sections/Curriculum";
 import Projects from "./sections/Projects";
 import Pricing from "./sections/Pricing";
 import Contact from "./sections/Contact";
-import FAQ from "./sections/FAQ";
+import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 
@@ -34,7 +34,7 @@ const App = () => {
         <Projects />
         <Pricing />
         <Contact />
-        <FAQ />
+        <Faq />
         <Footer />
       </div>
     </main>
