@@ -1,5 +1,4 @@
-import { Element } from "react-scroll";
-import LinkScroll from "./LinkScroll";
+import { Element, Link as LinkScroll } from "react-scroll";
 
 const Hero = () => {
   return (
