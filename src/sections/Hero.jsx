@@ -1,4 +1,5 @@
 import { Element } from "react-scroll";
+import LinkScroll from "./LinkScroll";
 
 const Hero = () => {
   return (
@@ -18,65 +19,56 @@ const Hero = () => {
               <div className="absolute left-1/2 -top-4 w-24 h-24 bg-pink-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
               <h1 className="relative text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Master Coding with Expert-Led 
-                <span className="relative inline-block px-2">
-                  Live Classes
-                  <div className="absolute inset-x-0 bottom-0 h-3 bg-blue-200/30 -z-10 transform skew-x-12"></div>
+                Transform Your Future with{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                  TezCode.Tech
                 </span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Join our intensive bootcamps and transform your career with hands-on projects, live mentoring, and industry-relevant curriculum.
+                Master modern web development through expert-led live classes, hands-on projects, and personalized mentoring. Start your coding journey today!
               </p>
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="#courses"
+                <LinkScroll
+                  to="courses"
                   className="px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transform hover:scale-105 transition-all duration-300"
+                  smooth={true}
+                  duration={500}
                 >
                   Explore Courses
-                </a>
-                <a
-                  href="#curriculum"
-                  className="px-8 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600 hover:text-blue-600 transition-colors duration-300"
+                </LinkScroll>
+                <LinkScroll
+                  to="curriculum"
+                  className="px-8 py-3 rounded-full border-2 border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transform hover:scale-105 transition-all duration-300"
+                  smooth={true}
+                  duration={500}
                 >
                   View Curriculum
-                </a>
+                </LinkScroll>
               </div>
+
               <div className="mt-12 flex items-center gap-8">
-                <div className="animate-fade-in" style={{ animationDelay: "200ms" }}>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                  <div className="text-gray-600">Students Trained</div>
+                <div>
+                  <h4 className="text-2xl font-bold text-gray-900">500+</h4>
+                  <p className="text-gray-600">Students Trained</p>
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "400ms" }}>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
-                  <div className="text-gray-600">Success Rate</div>
+                <div>
+                  <h4 className="text-2xl font-bold text-gray-900">95%</h4>
+                  <p className="text-gray-600">Success Rate</p>
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "600ms" }}>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                  <div className="text-gray-600">Projects Built</div>
+                <div>
+                  <h4 className="text-2xl font-bold text-gray-900">24/7</h4>
+                  <p className="text-gray-600">Support</p>
                 </div>
               </div>
             </div>
-            <div className="relative lg:h-[600px] animate-fade-in-left">
-              <img
-                src="https://placehold.co/800x600/e2e8f0/475569?text=Coding+Bootcamp+Hero+Image"
-                alt="Coding Bootcamp"
-                className="w-full h-full object-cover rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-500"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg animate-fade-in-up">
-                <div className="flex items-center gap-4">
-                  <img
-                    src="https://placehold.co/80x80/e2e8f0/475569?text=Student"
-                    alt="Student"
-                    className="w-12 h-12 rounded-full"
-                  />
-                  <div>
-                    <div className="text-sm font-medium text-gray-900">Sarah Johnson</div>
-                    <div className="text-sm text-gray-600">Full-Stack Developer @ Google</div>
-                  </div>
-                </div>
-                <div className="mt-2 text-sm text-gray-600">
-                  "TezCode transformed my career. I went from zero coding knowledge to a full-time developer role in 6 months!"
-                </div>
+
+            <div className="relative lg:block animate-fade-in">
+              <div className="relative z-10 bg-white p-8 rounded-2xl shadow-xl">
+                <img
+                  src="/hero-image.jpg"
+                  alt="Students learning to code at TezCode.Tech"
+                  className="rounded-lg w-full"
+                />
               </div>
             </div>
           </div>
