@@ -19,10 +19,14 @@ export default defineConfig({
             }
             return 'vendor';
           }
-        }
+        },
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
       }
     },
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    assetsDir: 'assets'
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-scroll', 'react-countup']
