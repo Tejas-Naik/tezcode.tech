@@ -1,6 +1,10 @@
 import { Element, Link as LinkScroll } from "react-scroll";
+import { motion } from 'framer-motion';
+import { useScrollAnimation, fadeInVariants, staggerChildrenVariants } from '../hooks/useAnimations';
 
 const Hero = () => {
+  const [ref, isInView] = useScrollAnimation();
+  
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background Pattern */}
@@ -10,23 +14,44 @@ const Hero = () => {
       </div>
 
       <Element name="hero">
-        <div className="container relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative animate-fade-in-up">
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={staggerChildrenVariants}
+          className="container relative"
+        >
+          <motion.div
+            variants={fadeInVariants}
+            className="grid lg:grid-cols-2 gap-12 items-center"
+          >
+            <motion.div
+              variants={fadeInVariants}
+              className="relative animate-fade-in-up"
+            >
               <div className="absolute -left-4 -top-4 w-24 h-24 bg-blue-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
               <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-purple-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
               <div className="absolute left-1/2 -top-4 w-24 h-24 bg-pink-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
-              <h1 className="relative text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <motion.h1 
+                variants={fadeInVariants}
+                className="relative text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              >
                 Transform Your Future with{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                   TezCode.Tech
                 </span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              </motion.h1>
+              <motion.p
+                variants={fadeInVariants}
+                className="text-xl text-gray-600 mb-8"
+              >
                 Master modern web development through expert-led live classes, hands-on projects, and personalized mentoring. Start your coding journey today!
-              </p>
-              <div className="flex flex-wrap gap-4">
+              </motion.p>
+              <motion.div
+                variants={fadeInVariants}
+                className="flex flex-wrap gap-4"
+              >
                 <LinkScroll
                   to="courses"
                   className="px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transform hover:scale-105 transition-all duration-300"
@@ -43,9 +68,12 @@ const Hero = () => {
                 >
                   View Curriculum
                 </LinkScroll>
-              </div>
+              </motion.div>
 
-              <div className="mt-12 flex items-center gap-8">
+              <motion.div
+                variants={fadeInVariants}
+                className="mt-12 flex items-center gap-8"
+              >
                 <div>
                   <h4 className="text-2xl font-bold text-gray-900">500+</h4>
                   <p className="text-gray-600">Students Trained</p>
@@ -58,10 +86,13 @@ const Hero = () => {
                   <h4 className="text-2xl font-bold text-gray-900">24/7</h4>
                   <p className="text-gray-600">Support</p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="relative lg:block animate-fade-in">
+            <motion.div
+              variants={fadeInVariants}
+              className="relative lg:block animate-fade-in"
+            >
               <div className="relative z-10 bg-white p-8 rounded-2xl shadow-xl">
                 <img
                   src="/hero-image.jpg"
@@ -69,10 +100,19 @@ const Hero = () => {
                   className="rounded-lg w-full"
                 />
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </Element>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="absolute bottom-0 left-0 w-full"
+      >
+        {/* Add your content here */}
+      </motion.div>
     </section>
   );
 };
