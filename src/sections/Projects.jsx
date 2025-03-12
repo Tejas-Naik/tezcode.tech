@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Element } from "react-scroll";
 
 const projects = [
