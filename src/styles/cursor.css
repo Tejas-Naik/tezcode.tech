@@ -1,0 +1,57 @@
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Cursor elements */
+.cursor-ring,
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  z-index: 9999;
+}
+
+/* Outer ring */
+.cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(145, 145, 145, 0.5);
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+/* Inner dot */
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  background-color: #666;
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Hidden state */
+.cursor-hidden {
+  opacity: 0;
+}
+
+/* Click animation */
+.cursor-clicked {
+  transform: scale(0.9);
+}
+
+/* Link hover animation */
+.cursor-link-hovered.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border-color: #666;
+  background-color: rgba(102, 102, 102, 0.1);
+}
+
+.cursor-link-hovered.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #666;
+}

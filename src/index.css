@@ -313,4 +313,7 @@
   }
 
   /*  END of Footer*/
+  * {
+    cursor: none;
+  }
 }

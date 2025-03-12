@@ -10,7 +10,9 @@ import Contact from "./sections/Contact";
 import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import LoadingScreen from "./components/LoadingScreen";
-import CustomCursor from './components/CustomCursor';
+import CustomCursor from "./components/CustomCursor";
+import PrerequisiteQuiz from "./components/PrerequisiteQuiz";
+import Testimonials from "./sections/Testimonials";
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -18,29 +20,32 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 1200); // Matches the loading screen duration
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <main className="relative">
-      <LoadingScreen />
-      <div className="relative z-0">
-        <CustomCursor />
-        <div className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <CustomCursor />
+      {!isLoaded ? (
+        <LoadingScreen />
+      ) : (
+        <>
           <Header />
           <Hero />
           <Features />
           <Courses />
+          <PrerequisiteQuiz />
           <Curriculum />
           <Projects />
+          <Testimonials />
           <Pricing />
           <Contact />
           <Faq />
           <Footer />
-        </div>
-      </div>
+        </>
+      )}
     </main>
   );
 };
