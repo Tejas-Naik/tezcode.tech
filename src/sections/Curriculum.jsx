@@ -4,67 +4,67 @@ import clsx from "clsx";
 
 const pythonCurriculum = [
   {
-    week: "Week 1-2",
-    title: "Modern Python Fundamentals",
+    week: "Days 1-15",
+    title: "Beginner Python",
     topics: [
-      "Python 3.12 Features",
-      "Type Hints & Data Structures",
-      "Advanced Functions & Lambdas",
-      "Comprehensions & Generators",
-      "Modern OOP Patterns",
-      "Exception Handling Best Practices"
+      "Python 3.12 Features & Setup",
+      "Variables & Data Types",
+      "Control Flow (IF/ELIF/ELSE)",
+      "Loops & Randomisation",
+      "Functions & Arguments",
+      "Lists & Dictionaries"
     ],
     icon: "code"
   },
   {
-    week: "Week 3-4",
-    title: "Developer Tools & Practices",
+    week: "Days 16-31",
+    title: "Intermediate Python",
     topics: [
-      "VS Code & GitHub Copilot",
-      "Git, GitHub & Collaboration",
-      "Testing & Test-Driven Development",
-      "Package Management & Virtual Environments",
-      "API Consumption & Development",
-      "Documentation & Clean Code"
+      "OOP & Creating Classes",
+      "VS Code & GitHub Copilot Integration",
+      "Inheritance & Methods",
+      "File I/O & CSV Data",
+      "Error Handling & Debugging",
+      "List & Dictionary Comprehensions"
     ],
     icon: "tool"
   },
   {
-    week: "Week 5-8",
-    title: "Web & Cloud Development",
+    week: "Days 32-58",
+    title: "Intermediate+ Python",
     topics: [
-      "FastAPI & RESTful Services",
-      "Django & Modern Web Apps",
-      "Database Design & ORM",
-      "Cloud Deployment (AWS/Azure)",
-      "CI/CD & DevOps Practices",
-      "Containerization with Docker"
+      "API Integrations & Requests",
+      "Web Scraping with Beautiful Soup",
+      "Browser Automation with Selenium",
+      "Web Development with Flask",
+      "Modern GUI Apps with Tkinter",
+      "Python Decorators & WTForms"
     ],
     icon: "cloud"
   },
   {
-    week: "Week 9-12",
-    title: "AI/ML & Data Science",
+    week: "Days 59-80",
+    title: "Advanced Python & Data Science",
     topics: [
+      "FastAPI & RESTful Services",
+      "Database Design with SQLite",
       "Pandas & NumPy for Data Analysis",
-      "Modern Visualization Libraries",
-      "Machine Learning with Scikit-learn",
-      "Neural Networks Fundamentals",
-      "NLP & Computer Vision Applications",
-      "MLOps & Model Deployment"
+      "Data Visualization (Matplotlib/Plotly)",
+      "Statistical Analysis & Regression",
+      "DevOps & Cloud Deployment"
     ],
     icon: "chip"
   },
   {
-    week: "Week 13-14",
-    title: "Career Preparation",
+    week: "Days 81-111",
+    title: "Professional Portfolio Projects",
     topics: [
-      "Portfolio Development",
-      "GitHub Profile Optimization",
-      "Technical Interview Preparation",
-      "Resume & LinkedIn Building",
-      "Freelancing & Client Projects",
-      "Networking & Community Engagement"
+      "Full-Stack Applications",
+      "Game Development in Python",
+      "Automation Projects",
+      "Data Analysis & Machine Learning",
+      "Web Applications & APIs",
+      "Custom Tool Development"
     ],
     icon: "briefcase"
   }

@@ -106,31 +106,31 @@ const PrerequisiteQuiz = () => {
 
   return (
     <Element name="prerequisite-quiz">
-      <section className="py-16">
+      <section className="py-16 bg-indigo-950 text-white">
         <div className="container max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect Course</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Find Your Perfect Course</h2>
+            <p className="text-lg text-indigo-200 max-w-2xl mx-auto">
               Take this quick quiz to discover which course matches your goals and current skill level
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="bg-indigo-900 rounded-2xl shadow-xl border border-blue-500/30 overflow-hidden">
             {!showResult ? (
               <div className="p-6 md:p-8">
                 <div className="flex justify-between items-center mb-6">
-                  <div className="text-sm font-medium text-gray-500">
+                  <div className="text-sm font-medium text-indigo-200">
                     Question {currentQuestion + 1} of {questions.length}
                   </div>
-                  <div className="w-24 bg-gray-200 rounded-full h-2.5">
+                  <div className="w-24 bg-indigo-700 rounded-full h-2.5">
                     <div 
-                      className="bg-blue-600 h-2.5 rounded-full" 
+                      className="bg-blue-500 h-2.5 rounded-full" 
                       style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                     ></div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                <h3 className="text-xl font-semibold text-white mb-6">
                   {questions[currentQuestion].question}
                 </h3>
 
@@ -138,15 +138,15 @@ const PrerequisiteQuiz = () => {
                   {questions[currentQuestion].options.map((option) => (
                     <button
                       key={option.id}
-                      className="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-blue-500 
-                      hover:bg-blue-50 transition-colors duration-200 flex items-start"
+                      className="w-full text-left p-4 rounded-xl border border-indigo-700 hover:border-blue-400 
+                      bg-indigo-800/50 hover:bg-indigo-700 transition-colors duration-200 flex items-start"
                       onClick={() => handleAnswer(option)}
                     >
-                      <span className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center 
-                      justify-center text-sm font-medium text-gray-700 mr-3 mt-0.5">
+                      <span className="w-6 h-6 rounded-full bg-blue-900 border border-blue-500 flex items-center 
+                      justify-center text-sm font-medium text-blue-100 mr-3 mt-0.5">
                         {option.id.toUpperCase()}
                       </span>
-                      <span>{option.text}</span>
+                      <span className="text-indigo-100">{option.text}</span>
                     </button>
                   ))}
                 </div>
@@ -154,39 +154,39 @@ const PrerequisiteQuiz = () => {
             ) : (
               <div className="p-6 md:p-8 text-center">
                 <div className="mb-6">
-                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
+                  <div className="w-20 h-20 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Your Results</h3>
-                  <p className="text-gray-600 mb-6">Based on your answers, we recommend:</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Your Results</h3>
+                  <p className="text-indigo-200 mb-6">Based on your answers, we recommend:</p>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">
+                <div className="bg-indigo-800 rounded-xl p-6 mb-6 border border-blue-500/30">
+                  <h4 className="text-xl font-bold text-blue-400 mb-2">
                     {result.courseMatch}
                   </h4>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-indigo-200 mb-4">
                     This course aligns with your goals and experience level.
                   </p>
                   
                   <div className="mb-4">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm font-medium text-gray-700">Readiness Level</span>
-                      <span className="text-sm font-medium text-blue-600">{result.readiness}%</span>
+                      <span className="text-sm font-medium text-indigo-200">Readiness Level</span>
+                      <span className="text-sm font-medium text-blue-300">{result.readiness}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <div className="w-full bg-indigo-700 rounded-full h-2.5">
                       <div 
                         className={`h-2.5 rounded-full ${
-                          result.readiness >= 70 ? 'bg-green-500' : 
-                          result.readiness >= 40 ? 'bg-yellow-500' : 'bg-orange-500'
+                          result.readiness >= 70 ? 'bg-green-400' : 
+                          result.readiness >= 40 ? 'bg-amber-400' : 'bg-orange-400'
                         }`}
                         style={{ width: `${result.readiness}%` }}
                       ></div>
                     </div>
-                    <p className="text-sm text-gray-600 mt-2">
+                    <p className="text-sm text-indigo-200 mt-2">
                       {result.readiness >= 70 
                         ? "You're ready to start this course!"
                         : result.readiness >= 40 
@@ -199,13 +199,13 @@ const PrerequisiteQuiz = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href="#courses" 
-                    className="px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-300"
+                    className="px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-300 shadow-md"
                   >
                     Explore Course
                   </a>
                   <button 
                     onClick={resetQuiz}
-                    className="px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-300"
+                    className="px-6 py-3 rounded-full border-2 border-blue-500/50 text-blue-300 font-medium hover:bg-indigo-800 transition-colors duration-300"
                   >
                     Retake Quiz
                   </button>

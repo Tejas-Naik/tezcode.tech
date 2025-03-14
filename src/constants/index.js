@@ -116,24 +116,41 @@ export const faq = [
 
 export const projects = [
   {
-    title: "Blackjack Game",
-    description: "Build a classic card game using Python",
-    day: "Day 11",
+    title: "Ecommerce Platform",
+    description: "Build a complete online store with payment processing",
+    day: "Week 3-4",
     image: "" // To be added later
   },
   {
-    title: "Snake Game",
-    description: "Create the classic Snake game with Python",
-    day: "Day 20-21",
+    title: "2D Games",
+    description: "Create classic Snake and Pong games using Python",
+    day: "Week 2",
     image: "" // To be added later
   },
   {
-    title: "Portfolio Website",
-    description: "Build your own portfolio website with Flask",
-    day: "Day 41-44",
+    title: "Blog Website",
+    description: "Develop a fully-featured blog with admin panel",
+    day: "Week 5",
     image: "" // To be added later
   },
-  // More projects to be added later
+  {
+    title: "Data Entry Automation",
+    description: "Build scripts to automate repetitive data tasks",
+    day: "Week 6",
+    image: "" // To be added later
+  },
+  {
+    title: "Data Visualization with Data Science Libraries",
+    description: "Create interactive dashboards using pandas, matplotlib, and seaborn",
+    day: "Week 7-8",
+    image: "" // To be added later
+  },
+  {
+    title: "Personal Portfolio Website",
+    description: "Design and develop your professional portfolio",
+    day: "Week 1",
+    image: "" // To be added later
+  }
 ];
 
 export const features = [
