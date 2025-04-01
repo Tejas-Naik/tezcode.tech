@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="32" cy="32" r="32" fill="#F0F4FF"/>
+    <g transform="translate(8 8)">
+      <!-- First person -->
+      <circle cx="12" cy="12" r="10" fill="#3B82F6" opacity="0.2"/>
+      <circle cx="12" cy="8" r="4" fill="#3B82F6"/>
+      <path d="M4 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+      
+      <!-- Second person -->
+      <circle cx="36" cy="12" r="10" fill="#6366F1" opacity="0.2"/>
+      <circle cx="36" cy="8" r="4" fill="#6366F1"/>
+      <path d="M28 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/>
+      
+      <!-- Connection -->
+      <path d="M19 12h10" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"/>
+      
+      <!-- Gift/Money icon -->
+      <circle cx="24" cy="36" r="8" fill="#DBEAFE"/>
+      <path d="M20 36h8M24 32v8" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="24" cy="36" r="3" fill="#93C5FD"/>
+    </g>
+  </g>
+</svg>

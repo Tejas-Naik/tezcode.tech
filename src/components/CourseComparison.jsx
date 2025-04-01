@@ -1,4 +1,4 @@
-import { Element } from "react-scroll";
+import { Element, Link as ScrollLink } from "react-scroll";
 
 const pythonFeatures = [
   {
@@ -136,12 +136,19 @@ const CourseComparison = () => {
                   ))}
                 </div>
                 
-                <a 
-                  href="#pricing" 
-                  className="mt-8 inline-block w-full py-4 px-6 text-center bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors duration-300"
-                >
-                  Enroll in Python Course
-                </a>
+                <div className="mt-6">
+                  <ScrollLink 
+                    to="contact" 
+                    smooth={true}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors duration-300 shadow-lg cursor-pointer"
+                    data-inquiry-type="enroll"
+                  >
+                    Enroll in Python Course
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </ScrollLink>
+                </div>
               </div>
             </div>
             
@@ -183,12 +190,19 @@ const CourseComparison = () => {
                   ))}
                 </div>
                 
-                <a 
-                  href="#pricing" 
-                  className="mt-8 inline-block w-full py-4 px-6 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-xl transition-colors duration-300"
-                >
-                  Enroll in Web Dev Course
-                </a>
+                <div className="mt-6">
+                  <ScrollLink 
+                    to="contact" 
+                    smooth={true}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors duration-300 shadow-lg cursor-pointer"
+                    data-inquiry-type="enroll"
+                  >
+                    Enroll in Web Dev Course
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </ScrollLink>
+                </div>
               </div>
             </div>
           </div>

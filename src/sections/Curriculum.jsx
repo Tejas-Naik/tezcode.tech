@@ -1,4 +1,4 @@
-import { Element } from "react-scroll";
+import { Element, Link as ScrollLink } from "react-scroll";
 import { useState } from "react";
 import clsx from "clsx";
 
@@ -319,15 +319,29 @@ const Curriculum = () => {
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               All courses include <span className="font-semibold">daily live classes</span>, <span className="font-semibold">personalized feedback</span>, and <span className="font-semibold">project-based learning</span> to ensure you master these skills
             </p>
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium hover:from-blue-700 hover:to-blue-600 transition-colors duration-300 shadow-md"
-            >
-              Enroll Now and Transform Your Career
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+            <div className="flex justify-center mt-12">
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                className="px-8 py-4 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium text-lg inline-flex items-center cursor-pointer"
+                data-inquiry-type="enroll"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+                Enroll Now and Transform Your Career
+              </ScrollLink>
+            </div>
           </div>
         </div>
       </Element>

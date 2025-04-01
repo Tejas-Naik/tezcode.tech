@@ -1,4 +1,4 @@
-import { Element } from "react-scroll";
+import { Element, Link as ScrollLink } from "react-scroll";
 import { useState, useEffect } from "react";
 
 // Course instructor data
@@ -273,19 +273,15 @@ const Courses = () => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a
-                      href="#pricing"
-                      className={`flex-1 text-center items-center justify-center gap-2 px-6 py-3 rounded-xl ${index === 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-indigo-600 hover:bg-indigo-700'} text-white font-medium transition-colors duration-300`}
+                  <div className="mt-6">
+                    <ScrollLink
+                      to="contact"
+                      smooth={true}
+                      className="inline-flex items-center px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-medium cursor-pointer"
+                      data-inquiry-type="enroll"
                     >
                       Enroll Now
-                    </a>
-                    <a
-                      href="#free-trial"
-                      className="flex-1 text-center px-6 py-3 rounded-xl border-2 border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-300"
-                    >
-                      Free Trial Class
-                    </a>
+                    </ScrollLink>
                   </div>
                 </div>
               </div>
