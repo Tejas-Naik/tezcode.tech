@@ -177,7 +177,7 @@ const Contact = () => {
                       Our Location
                     </h4>
                     <p className="text-gray-600 mt-1">
-                      123 Coding Street, Tech Valley, CA 94025
+                      Remote, Everywhere from the World
                     </p>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                     <h4 className="text-lg font-semibold text-gray-900">
                       Call Us
                     </h4>
-                    <p className="text-gray-600 mt-1">+1 (555) 123-4567</p>
+                    <p className="text-gray-600 mt-1">+91 6361125087</p>
                   </div>
                 </div>
               </div>

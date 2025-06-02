@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import { Element } from "react-scroll";
 
 const testimonials = [
   {
     name: "Adrian Rodriguez",
-    role: "Computer Science Student, Torronto University",
+    role: "Computer Science Student, Toronto University",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     quote:
-      "Tejas provided me with the tools I need to enhance my coding skills in a dynamic way. I truly enjoyed the 100 days of code bootcamp, as I was able to receive tons of practice in python. I cannot recommend this  bootcamp enough, extremely worth it!",
+      "Tejas provided me with the tools I need to enhance my coding skills in a dynamic way. I truly enjoyed the 100 days of code bootcamp, as I was able to receive tons of practice in python. I cannot recommend this bootcamp enough, extremely worth it!",
     course: "100 Days of Python",
     rating: 5,
     metrics: [
@@ -17,23 +16,23 @@ const testimonials = [
   },
   {
     name: "Abhishek Nasalapure",
-    role: "Collage Student, Jain College",
+    role: "College Student, Jain College",
     image: "https://randomuser.me/api/portraits/men/44.jpg",
     quote:
-      "I recently attended the 100 DAYS OF CODE bootcamp, and it was incredible! The instruction was nicely organized, interesting, and applicable. The teacher explained difficult ideas in simple terms, and the daily coding exercises helped me stay on track. It also helped me with my college syllabus coding, making concepts much easier to understand. I've increased my confidence with Python and enhanced my problem-solving abilities. This bootcamp totally changed my coding mindset. If you need to up your programming game, I definitely recommend it!",
+      "I recently attended the 100 DAYS OF CODE bootcamp, and it was incredible! The instruction was nicely organized, interesting, and applicable. The teacher explained difficult ideas in simple terms, and the daily coding exercises helped me stay on track. It also helped me with my college syllabus coding, making concepts much easier to understand. I've increased my confidence with Python and enhanced my problem-solving abilities. This bootcamp totally changed my coding mindset. If you need to up your programming game, I definitely recommend it!",
     course: "100 Days of Code",
     rating: 5,
     metrics: [
-      { label: "Collage CGPA", before: "7.1", after: "9.2" },
+      { label: "College CGPA", before: "7.1", after: "9.2" },
       { label: "Projects Completed", value: "15" },
     ],
   },
   {
     name: "Advika Gurav",
-    role: "Collage Student, VTU",
+    role: "College Student, VTU",
     image: "https://randomuser.me/api/portraits/women/67.jpg",
     quote:
-      "The Web Development Bootcamp in which I learnt web programming.. It was an hands on experience as I learnt html and css and then developed a website too.. It helped me a lot to understand the front hand development... This 100days code minimizes the learning time but gives all the information required",
+      "The Web Development Bootcamp in which I learnt web programming.. It was an hands on experience as I learnt html and css and then developed a website too.. It helped me a lot to understand the front hand development... This 100days code minimizes the learning time but gives all the information required",
     course: "Web Development Bootcamp",
     rating: 5,
     metrics: [
@@ -42,17 +41,72 @@ const testimonials = [
     ],
   },
   {
-    name: "Meera Joshi",
-    role: "Full-Stack Developer",
-    image: "https://randomuser.me/api/portraits/women/29.jpg",
+    name: "Leen Mohannad",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/women/1.jpg", // Placeholder image
     quote:
-      "TezCode's daily live classes made all the difference compared to other online courses I tried. The instructors explained complex concepts clearly and were always available for questions. Now I work as a full-stack developer at a tech company.",
-    course: "Web Development Bootcamp",
+      "He has a great sense of humor, the classes are quite enjoyable and understandable, and he has really good experience in coding.",
+    course: "Python Course",
     rating: 5,
-    metrics: [
-      { label: "Job Applications", before: "15+", after: "1 (Hired!)" },
-      { label: "GitHub Contributions", value: "200+" },
-    ],
+    metrics: [],
+  },
+  {
+    name: "Ali Ijlal Amin",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/men/2.jpg", // Placeholder image
+    quote:
+      "Not gonna lie, he's goated. He teaches well, answers any question I ask and explains it well and helps me a lot. From Python to Java, we're ready to attack, Thanks to my teacher, I’m never lookin' back!",
+    course: "Python Course",
+    rating: 5,
+    metrics: [],
+  },
+  {
+    name: "Afsa Amity",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/women/3.jpg", // Placeholder image
+    quote:
+      "He is sweet and explains properly. He's very funny and makes the classes enjoyable, also has great humor.",
+    course: "Python Course",
+    rating: 5,
+    metrics: [],
+  },
+  {
+    name: "Aaron",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/men/4.jpg", // Placeholder image
+    quote: "He is very interactive and fun and the lessons are worth it.",
+    course: "Python Course",
+    rating: 5,
+    metrics: [],
+  },
+  {
+    name: "amairaa singh",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/women/5.jpg", // Placeholder image
+    quote:
+      "Sir Tejas Naik is very, very, very funny, he explains really well. Coding is easy with him.",
+    course: "Python Course",
+    rating: 5,
+    metrics: [],
+  },
+  {
+    name: "Khalid Alrefai",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/men/6.jpg", // Placeholder image
+    quote: "Very fun and gives clear explanations and is very funny.",
+    course: "Python Course",
+    rating: 5,
+    metrics: [],
+  },
+  {
+    name: "Youssef Abdelmaksoud",
+    role: "Verified Student",
+    image: "https://randomuser.me/api/portraits/men/7.jpg", // Placeholder image
+    quote:
+      "He is a good teacher and he explains everything well and he is so funny.",
+    course: "Python Course",
+    rating: 5,
+    metrics: [],
   },
 ];
 
@@ -160,72 +214,77 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <Element name="testimonials">
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Student Success Stories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our students come from diverse backgrounds but share one thing in
-              common: they've transformed their careers through our live
-              interactive classes
-            </p>
-          </div>
+    // Removed <Element name="testimonials"> wrapper
+    <section
+      id="testimonials"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
+      {" "}
+      {/* Added id="testimonials" */}
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Student Success Stories
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our students come from diverse backgrounds but share one thing in
+            common: they've transformed their careers through our live
+            interactive classes
+          </p>
+        </div>
 
-          <div className="max-w-4xl mx-auto relative min-h-[400px]">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
+        <div className="max-w-4xl mx-auto relative min-h-[400px]">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={index}
+              testimonial={testimonial}
+              isActive={index === activeIndex}
+            />
+          ))}
+
+          <div className="flex justify-center mt-8 gap-2">
+            {testimonials.map((_, index) => (
+              <button
                 key={index}
-                testimonial={testimonial}
-                isActive={index === activeIndex}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === activeIndex
+                    ? "bg-blue-600 w-6"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+                onClick={() => setActiveIndex(index)}
               />
             ))}
-
-            <div className="flex justify-center mt-8 gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === activeIndex
-                      ? "bg-blue-600 w-6"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  onClick={() => setActiveIndex(index)}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <p className="text-gray-800 font-medium mb-8 max-w-2xl mx-auto">
-              Join hundreds of students who have already transformed their
-              careers with TezCode's live interactive courses
-            </p>
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
-            >
-              Start Your Journey
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
           </div>
         </div>
-      </section>
-    </Element>
+
+        <div className="mt-16 text-center">
+          <p className="text-gray-800 font-medium mb-8 max-w-2xl mx-auto">
+            Join hundreds of students who have already transformed their careers
+            with TezCode's live interactive courses
+          </p>
+          <a
+            href="#pricing"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
+          >
+            Start Your Journey
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    // Removed </Element> wrapper
   );
 };
 
