@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-indigo-600 text-white py-12"
+      className="bg-gradient-to-b from-white via-blue-50 to-indigo-100 text-gray-800 py-12 border-t border-blue-100"
       role="contentinfo"
       aria-label="Site footer"
     >
@@ -18,19 +18,19 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-indigo-100 to-blue-100 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
                 TezCode
               </span>
-              <span className="text-white">.Tech</span>
+              <span className="text-blue-900">.Tech</span>
             </h3>
-            <p className="text-indigo-100 mb-6">
+            <p className="text-blue-800 mb-6">
               Transforming careers through expert-led coding education and
               hands-on projects.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://twitter.com/tezcode"
-                className="text-white hover:text-indigo-200 transition-colors duration-300"
+                className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <svg
@@ -44,7 +44,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://github.com/tezcode"
-                className="text-white hover:text-indigo-200 transition-colors duration-300"
+                className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
                 aria-label="GitHub"
               >
                 <svg
@@ -62,7 +62,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://linkedin.com/company/tezcode"
-                className="text-white hover:text-indigo-200 transition-colors duration-300"
+                className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-indigo-100 mb-4">
+            <h4 className="text-lg font-semibold text-blue-900 mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2" aria-label="Quick navigation links">
@@ -91,7 +91,7 @@ const Footer = () => {
                 <Link
                   to="features"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                   aria-label="Navigate to Features section"
                 >
                   Features
@@ -101,7 +101,7 @@ const Footer = () => {
                 <Link
                   to="courses"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                   aria-label="Navigate to Courses section"
                 >
                   Courses
@@ -111,7 +111,7 @@ const Footer = () => {
                 <Link
                   to="curriculum"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                   aria-label="Navigate to Curriculum section"
                 >
                   Curriculum
@@ -121,7 +121,7 @@ const Footer = () => {
                 <Link
                   to="pricing"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                   aria-label="Navigate to Pricing section"
                 >
                   Pricing
@@ -131,7 +131,7 @@ const Footer = () => {
                 <Link
                   to="contact"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                   aria-label="Navigate to Contact section"
                 >
                   Contact Us
@@ -142,13 +142,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-indigo-100 mb-4">
+            <h4 className="text-lg font-semibold text-blue-900 mb-4">
               Contact
             </h4>
             <ul className="space-y-2" aria-label="Contact information">
               <li className="flex items-start space-x-3">
                 <svg
-                  className="w-6 h-6 text-indigo-200 mt-1"
+                  className="w-6 h-6 text-blue-700 mt-1"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -170,14 +170,14 @@ const Footer = () => {
                 <Link
                   to="contact"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer"
                 >
                   Remote, Everywhere from the world!
                 </Link>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
-                  className="w-6 h-6 text-indigo-200"
+                  className="w-6 h-6 text-blue-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -193,14 +193,14 @@ const Footer = () => {
                 <Link
                   to="contact"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                 >
                   tejas@tezcode.info
                 </Link>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
-                  className="w-6 h-6 text-indigo-200"
+                  className="w-6 h-6 text-blue-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -216,7 +216,7 @@ const Footer = () => {
                 <Link
                   to="contact"
                   smooth={true}
-                  className="text-indigo-100 hover:text-white transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
+                  className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer focus:outline-none focus:underline"
                 >
                   +91 6361125087
                 </Link>
@@ -226,10 +226,10 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-lg font-semibold text-indigo-100 mb-4">
+            <h4 className="text-lg font-semibold text-blue-900 mb-4">
               Newsletter
             </h4>
-            <p className="text-indigo-100 mb-4">
+            <p className="text-blue-800 mb-4">
               Subscribe to our newsletter for updates and exclusive content.
             </p>
             <form
@@ -242,21 +242,21 @@ const Footer = () => {
                   type="email"
                   placeholder="Enter your email"
                   aria-label="Email address"
-                  className="w-full px-4 py-2 bg-indigo-700 border border-indigo-500 rounded-lg focus:outline-none focus:border-indigo-300 text-indigo-100"
+                  className="w-full px-4 py-2 bg-white border border-blue-200 rounded-lg focus:outline-none focus:border-blue-400 text-blue-900 placeholder-blue-400"
                   required
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   title="Please enter a valid email address"
                 />
                 <div
                   id="newsletter-error"
-                  className="hidden text-red-300 text-xs mt-1"
+                  className="hidden text-red-400 text-xs mt-1"
                 >
                   Please enter a valid email address
                 </div>
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-400 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 relative overflow-hidden"
+                className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 relative overflow-hidden"
                 aria-label="Subscribe to newsletter"
               >
                 Subscribe
@@ -266,29 +266,29 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-indigo-500 py-8">
+        <div className="border-t border-blue-100 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-indigo-100 text-sm">
+            <p className="text-blue-800 text-sm">
               2025 TezCode. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="/privacy"
-                className="text-indigo-100 hover:text-white text-sm focus:outline-none focus:underline"
+                className="text-blue-600 hover:text-blue-800 text-sm focus:outline-none focus:underline"
                 aria-label="Privacy Policy"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-indigo-100 hover:text-white text-sm focus:outline-none focus:underline"
+                className="text-blue-600 hover:text-blue-800 text-sm focus:outline-none focus:underline"
                 aria-label="Terms of Service"
               >
                 Terms of Service
               </a>
               <a
                 href="/cookies"
-                className="text-indigo-100 hover:text-white text-sm focus:outline-none focus:underline"
+                className="text-blue-600 hover:text-blue-800 text-sm focus:outline-none focus:underline"
                 aria-label="Cookie Policy"
               >
                 Cookie Policy

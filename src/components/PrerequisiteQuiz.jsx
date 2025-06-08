@@ -207,39 +207,38 @@ const PrerequisiteQuiz = () => {
   const currentQuestionData = questions[currentQuestion];
 
   return (
-    // Changed Element to a section with id
     <section
       id="prerequisite-quiz"
-      className="py-16 md:py-24 bg-gradient-to-br from-indigo-950 to-blue-900 text-white relative overflow-hidden"
+      className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 text-gray-900 relative overflow-hidden"
     >
       {/* Decorative background circles/blobs */}
-      <div className="absolute -top-20 -left-20 w-64 h-64 bg-blue-700 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-      <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-indigo-700 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+      <div className="absolute -top-20 -left-20 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+      <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
 
       <div className="container max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight">
-            Find Your{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+            Find Your {" "}
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
               Perfect Course
             </span>
           </h2>
-          <p className="text-lg text-indigo-200 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Take this quick quiz to discover which course matches your goals and
             current skill level.
           </p>
         </div>
 
-        <div className="bg-indigo-900 rounded-3xl shadow-2xl border border-indigo-700/50 overflow-hidden transform transition-all duration-500 ease-in-out">
+        <div className="bg-white rounded-3xl shadow-xl border border-blue-100 overflow-hidden transform transition-all duration-500 ease-in-out">
           {!showResult ? (
             <div className="p-6 md:p-10">
               <div className="flex justify-between items-center mb-8">
-                <div className="text-base font-semibold text-indigo-200">
+                <div className="text-base font-semibold text-blue-600">
                   Question {currentQuestion + 1} of {questions.length}
                 </div>
-                <div className="w-32 bg-indigo-700 rounded-full h-3.5 shadow-inner">
+                <div className="w-32 bg-blue-100 rounded-full h-3.5 shadow-inner">
                   <div
-                    className="h-3.5 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-500 ease-out"
+                    className="h-3.5 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 transition-all duration-500 ease-out"
                     style={{
                       width: `${((currentQuestion + 1) / questions.length) * 100}%`,
                     }}
@@ -247,7 +246,7 @@ const PrerequisiteQuiz = () => {
                 </div>
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 leading-snug">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 leading-snug">
                 {currentQuestionData.question}
               </h3>
 
@@ -255,20 +254,20 @@ const PrerequisiteQuiz = () => {
                 {currentQuestionData.options.map((option) => (
                   <button
                     key={option.id}
-                    className="w-full text-left p-4 md:p-5 rounded-xl border border-indigo-700 hover:border-blue-400
-                                 bg-indigo-800/60 hover:bg-indigo-700 transition-all duration-300
-                                 flex items-start group relative overflow-hidden transform hover:-translate-y-1 shadow-lg"
+                    className="w-full text-left p-4 md:p-5 rounded-xl border border-blue-100 hover:border-blue-400
+                                 bg-blue-50 hover:bg-blue-100 transition-all duration-300
+                                 flex items-start group relative overflow-hidden transform hover:-translate-y-1 shadow-sm"
                     onClick={() => handleAnswer(option)}
                   >
                     {/* Hover gradient effect */}
-                    <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-blue-100 to-indigo-100 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                     <span
-                      className="w-8 h-8 rounded-full bg-indigo-700 border border-indigo-500 flex items-center
-                                 justify-center text-lg font-bold text-indigo-100 mr-4 flex-shrink-0 shadow-inner"
+                      className="w-8 h-8 rounded-full bg-blue-200 border border-blue-300 flex items-center
+                                 justify-center text-lg font-bold text-blue-700 mr-4 flex-shrink-0 shadow-inner"
                     >
                       {option.id.toUpperCase()}
                     </span>
-                    <span className="text-indigo-100 text-lg font-medium relative z-10">
+                    <span className="text-blue-900 text-lg font-medium relative z-10">
                       {option.text}
                     </span>
                   </button>
@@ -278,7 +277,7 @@ const PrerequisiteQuiz = () => {
           ) : (
             <div className="p-6 md:p-10 text-center animate-fade-in">
               <div className="mb-8">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-scale-up">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-scale-up">
                   <svg
                     className="w-12 h-12 text-white"
                     fill="none"
@@ -293,33 +292,33 @@ const PrerequisiteQuiz = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                   Your Perfect Match Found!
                 </h3>
-                <p className="text-lg text-indigo-200">
+                <p className="text-lg text-gray-600">
                   Based on your answers, we recommend:
                 </p>
               </div>
 
-              <div className="bg-indigo-800 rounded-2xl p-6 md:p-8 mb-8 border border-indigo-700/50 shadow-inner">
-                <h4 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
+              <div className="bg-blue-50 rounded-2xl p-6 md:p-8 mb-8 border border-blue-100 shadow-inner">
+                <h4 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent mb-3">
                   {result.courseMatch}
                 </h4>
-                <p className="text-indigo-200 text-base mb-5">
+                <p className="text-blue-800 text-base mb-5">
                   This course perfectly aligns with your goals and experience
                   level.
                 </p>
 
                 <div className="mb-4">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-base font-semibold text-indigo-200">
+                    <span className="text-base font-semibold text-blue-600">
                       Your Readiness Level
                     </span>
-                    <span className="text-base font-bold text-indigo-300">
+                    <span className="text-base font-bold text-blue-800">
                       {result.readiness}%
                     </span>
                   </div>
-                  <div className="w-full bg-indigo-700 rounded-full h-3.5 shadow-inner">
+                  <div className="w-full bg-blue-100 rounded-full h-3.5 shadow-inner">
                     <div
                       className={`h-3.5 rounded-full transition-all duration-700 ease-out ${
                         result.readiness >= 70
@@ -331,7 +330,7 @@ const PrerequisiteQuiz = () => {
                       style={{ width: `${result.readiness}%` }}
                     ></div>
                   </div>
-                  <p className="text-sm text-indigo-200 mt-3">
+                  <p className="text-sm text-blue-700 mt-3">
                     {result.readiness >= 70
                       ? "You're all set to start this course and excel!"
                       : result.readiness >= 40
@@ -350,7 +349,7 @@ const PrerequisiteQuiz = () => {
                 </a>
                 <button
                   onClick={resetQuiz}
-                  className="px-8 py-4 rounded-full border-2 border-indigo-500/50 text-indigo-300 font-semibold text-lg hover:bg-indigo-800 hover:border-indigo-400 transition-all duration-300 shadow-md transform hover:scale-105"
+                  className="px-8 py-4 rounded-full border-2 border-blue-200 text-blue-700 font-semibold text-lg hover:bg-blue-100 hover:border-blue-400 transition-all duration-300 shadow-md transform hover:scale-105"
                 >
                   Retake Quiz
                 </button>

@@ -10,7 +10,6 @@ import Contact from "./sections/Contact";
 import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import LoadingScreen from "./components/LoadingScreen";
-import CustomCursor from "./components/CustomCursor";
 import PrerequisiteQuiz from "./components/PrerequisiteQuiz";
 import Testimonials from "./sections/Testimonials";
 
@@ -27,7 +26,6 @@ const App = () => {
 
   return (
     <main className="relative">
-      <CustomCursor />
       {!isLoaded ? (
         <LoadingScreen />
       ) : (

@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { Element } from "react-scroll";
-
 // const projects = [
 //   {
 //     title: "Ecommerce Platform",
@@ -148,7 +145,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-white to-indigo-50"
+      className="py-20 bg-gradient-to-b from-blue-50 via-white to-indigo-100"
     >
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -169,7 +166,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-indigo-100 flex flex-col h-full group"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 border border-blue-100 flex flex-col h-full group hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50/60"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -178,7 +175,7 @@ const Projects = () => {
                   className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-0 right-0 p-2">
-                  <span className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-600 text-white">
+                  <span className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-600 text-white shadow-md">
                     {project.category === "python" ? "Python" : "Web Dev"}
                   </span>
                 </div>
@@ -194,7 +191,7 @@ const Projects = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800"
+                      className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800"
                     >
                       {tech}
                     </span>
@@ -202,7 +199,7 @@ const Projects = () => {
                 </div>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg font-medium transition-colors duration-200"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg font-medium transition-colors duration-200 shadow-sm"
                 >
                   <span>View Project</span>
                   <svg
