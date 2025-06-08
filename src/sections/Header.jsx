@@ -123,8 +123,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "py-3 bg-white shadow-md" : "py-5 bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-lg bg-white/70 border-b border-blue-100/60 ${
+        scrolled ? "py-3 shadow-lg" : "py-5 bg-transparent shadow-none"
       }`}
       role="banner"
       aria-label="Main navigation"

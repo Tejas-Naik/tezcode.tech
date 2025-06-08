@@ -186,6 +186,22 @@ const Hero = () => {
                 confidently.
               </p>
 
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-4 mb-8 animate-fade-in-up animation-delay-800">
+                <a
+                  href="#prerequisite-quiz"
+                  className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
+                >
+                  Start Your Journey
+                </a>
+                <a
+                  href="#courses"
+                  className="inline-block px-8 py-4 rounded-full border-2 border-blue-200 text-blue-700 font-semibold text-lg bg-white hover:bg-blue-50 hover:border-blue-400 transition-all duration-300 shadow-md"
+                >
+                  See Courses
+                </a>
+              </div>
+
               {/* Added badges for key benefits */}
               <div className="flex flex-wrap gap-2 mb-8 animate-fade-in-up animation-delay-800">
                 <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">

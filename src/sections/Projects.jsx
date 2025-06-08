@@ -52,6 +52,14 @@ const projects = [
     tech: ["Python"],
   },
   {
+    title: "Python Data Analysis Suite",
+    description:
+      "A comprehensive data analysis toolkit using Python, Pandas, and Matplotlib to process, analyze, and visualize real-world datasets.",
+    category: "python",
+    image: "https://placehold.co/600x400/e2e8f0/475569?text=Python+Data+Analysis",
+    tech: ["Python", "Pandas", "Matplotlib"],
+  },
+  {
     title: "Arcade Classics: Snake & Pong",
     description:
       "Recreations of the classic Snake and Pong games, built using Python with the Turtle module for graphics and event handling.",

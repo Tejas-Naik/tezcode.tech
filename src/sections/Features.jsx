@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Element } from "react-scroll";
 import { features } from "../constants";
 
@@ -113,9 +113,10 @@ const FeatureCard = ({ feature, index }) => {
   
   return (
     <div
-      className={`rounded-2xl overflow-hidden border transition-all duration-300 bg-gradient-to-br ${gradients[index % gradients.length]} ${isExpanded ? 'shadow-lg transform scale-105 z-10' : 'hover:shadow-md'}`}
+      className={`rounded-2xl overflow-hidden border transition-all duration-300 bg-gradient-to-br ${gradients[index % gradients.length]} ${isExpanded ? 'shadow-lg transform scale-105 z-10' : 'hover:shadow-xl hover:scale-105 cursor-pointer'}`}
+      onClick={() => setIsExpanded(!isExpanded)}
     >
-      <div className="p-6 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
+      <div className="p-6">
         <div className="flex items-start gap-4">
           <div className={`w-12 h-12 rounded-xl ${iconColors[index % iconColors.length]} flex items-center justify-center flex-shrink-0`}>
             <svg
@@ -166,9 +167,57 @@ const FeatureCard = ({ feature, index }) => {
   );
 };
 
+// CountUp hook for animated numbers
+function useCountUp(end, duration = 1200, start = 0) {
+  const [count, setCount] = useState(start);
+  useEffect(() => {
+    let startTimestamp = null;
+    let req;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * (end - start) + start));
+      if (progress < 1) {
+        req = requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+    req = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(req);
+  }, [end, duration, start]);
+  return count;
+}
+
+// Reveal on scroll hook
+function useReveal(ref) {
+  const [revealed, setRevealed] = useState(false);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setRevealed(true);
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [ref]);
+  return revealed;
+}
+
 const Features = () => {
+  const sectionRef = useRef();
+  const revealed = useReveal(sectionRef);
+  // Animated stats
+  const students = useCountUp(revealed ? 500 : 0);
+  const projects = useCountUp(revealed ? 125 : 0);
+  const completion = useCountUp(revealed ? 97 : 0);
+  const placement = useCountUp(revealed ? 89 : 0);
+
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section ref={sectionRef} className={`py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       {/* Background elements for visual interest */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-50 rounded-full opacity-50 blur-3xl"></div>
@@ -197,19 +246,19 @@ const Features = () => {
           {/* Success metrics statistics */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all duration-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">{students}+</div>
               <p className="text-gray-700">Active Students</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all duration-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">125+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">{projects}+</div>
               <p className="text-gray-700">Projects Built</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all duration-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">97%</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">{completion}%</div>
               <p className="text-gray-700">Completion Rate</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all duration-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">89%</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">{placement}%</div>
               <p className="text-gray-700">Placement Rate</p>
             </div>
           </div>
