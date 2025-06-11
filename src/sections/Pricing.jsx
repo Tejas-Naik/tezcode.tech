@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Element, Link as ScrollLink } from "react-scroll";
+   import PayPalHostedButton from "../components/PayPalHostedButton";
 
 // Enhanced comparison data for plans
 const featureComparisonData = [
@@ -107,6 +108,9 @@ const Pricing = () => {
   const employmentRate = 87;
   const avgSalaryIncrease = 42;
 
+  // Paypal
+  const [checkout, setCheckOut] = useState(false);
+
   return (
     <Element name="pricing">
       <section
@@ -155,6 +159,20 @@ const Pricing = () => {
                 >
                   Start Your Journey
                 </a>
+                {/* {checkout ? (
+                  <PayPal />
+                ) : (
+                  <button
+                    onClick={() => {
+                      setCheckOut(true);
+                    }}
+                  >
+                    Checkout
+                  </button>
+                )} */}
+
+                {/* <div id="js-sdk-container-T7GRYXHB9H5NL"></div> */}
+                   <PayPalHostedButton />
               </div>
               <div className="p-6 flex-grow">
                 <ul className="space-y-3">
