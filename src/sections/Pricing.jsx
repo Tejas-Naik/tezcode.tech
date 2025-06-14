@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Element, Link as ScrollLink } from "react-scroll";
-   import PayPalHostedButton from "../components/PayPalHostedButton";
+  //  import PayPalHostedButton from "../components/PayPalHostedButton";
 
 // Enhanced comparison data for plans
 const featureComparisonData = [
@@ -172,7 +172,7 @@ const Pricing = () => {
                 )} */}
 
                 {/* <div id="js-sdk-container-T7GRYXHB9H5NL"></div> */}
-                   <PayPalHostedButton />
+                   {/* <PayPalHostedButton /> */}
               </div>
               <div className="p-6 flex-grow">
                 <ul className="space-y-3">
