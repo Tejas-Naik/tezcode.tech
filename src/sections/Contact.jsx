@@ -177,7 +177,7 @@ const Contact = () => {
                       Our Location
                     </h4>
                     <p className="text-gray-600 mt-1">
-                      Remote, Everywhere from the World
+                      Remote, Anywhere from the World
                     </p>
                   </div>
                 </div>

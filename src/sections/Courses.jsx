@@ -9,7 +9,7 @@ const instructors = [
     experience: "5+ years teaching experience",
     credentials:
       "Computer Science graduate, Python expert with modern stack knowledge including FastAPI, Django, AI/ML and DevOps",
-    image: "https://randomuser.me/api/portraits/men/32.jpg", // Placeholder, ideally use a professional photo
+    image: "../../public/images/tejas.jpg", // Placeholder, ideally use a professional photo
     social: {
       linkedin: "#", // Replace with actual links
       github: "#", // Replace with actual links
@@ -22,20 +22,22 @@ const courses = [
   {
     title: "100 Days of Python",
     description:
-      "Master Python 3.12 with our comprehensive program covering the latest features, modern development environments (VS Code, GitHub Copilot), advanced frameworks (FastAPI, Django), cloud & DevOps practices, AI/ML integration, and career preparation. Build impressive projects while learning industry best practices.",
+      "Master Python 3.12 with our comprehensive program covering the latest features, modern development environments, Game Development, Web Development and Python specific best practices, Data Visualization integration, and career preparation. Build impressive projects while learning industry best practices.",
     duration: "14 weeks",
     level: "Beginner to Advanced",
     projects: 100,
     studentsHelped: 326,
-    image: "https://placehold.co/800x600/e2e8f0/475569?text=Python+Course",
+    image: "../../public/images/Course/python.png",
     badgeText: "Most Popular",
     status: "open", // Added status
     techStack: [
       "Latest Python 3.12 features",
-      "VS Code & GitHub Copilot",
-      "FastAPI & Django frameworks",
-      "Cloud & DevOps practices",
-      "AI/ML integration",
+      "PyCharm & GitHub Copilot",
+      "Selenium Web Driver",
+      "Web Development",
+      "Game Development",
+      "APIs",
+      "Automation"
     ],
     features: [
       "Daily LIVE coding sessions",
@@ -149,35 +151,6 @@ const Courses = () => {
           </p>
         </div>
 
-        {/* Course filter tabs */}
-        <div className="max-w-3xl mx-auto mb-12">
-          <div className="bg-white p-2 rounded-xl shadow-md border border-gray-200 flex flex-wrap justify-center gap-2">
-            <button
-              onClick={() => setActiveTab("all")}
-              className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${activeTab === "all" ? "bg-blue-600 text-white shadow-sm" : "text-gray-600 hover:bg-gray-100"}`}
-            >
-              All Courses
-            </button>
-            <button
-              onClick={() => setActiveTab("python")}
-              className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${activeTab === "python" ? "bg-blue-600 text-white shadow-sm" : "text-gray-600 hover:bg-gray-100"}`}
-            >
-              Python Courses
-            </button>
-            <button
-              onClick={() => setActiveTab("web")}
-              className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${activeTab === "web" ? "bg-blue-600 text-white shadow-sm" : "text-gray-600 hover:bg-gray-100"}`}
-            >
-              Web Development
-            </button>
-            <button
-              onClick={() => setActiveTab("beginner")}
-              className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${activeTab === "beginner" ? "bg-blue-600 text-white shadow-sm" : "text-gray-600 hover:bg-gray-100"}`}
-            >
-              Beginner Friendly
-            </button>
-          </div>
-        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {filteredCourses.map((course, index) => (

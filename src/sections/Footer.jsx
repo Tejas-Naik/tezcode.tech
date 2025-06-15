@@ -172,7 +172,7 @@ const Footer = () => {
                   smooth={true}
                   className="text-blue-800 hover:text-blue-900 transition-colors duration-300 cursor-pointer"
                 >
-                  Remote, Everywhere from the world!
+                  Remote, Anywhere from the world!
                 </Link>
               </li>
               <li className="flex items-center space-x-3">

@@ -119,17 +119,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative pt-32 pb-20 overflow-hidden">
+    <section id="hero" className="relative pt-32 pb-20 overflow-hidden bg-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-white"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDU5LCAxMzAsIDI0NiwgMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')]} opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-white opacity-50"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDU5LCAxMzAsIDI0NiwgMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')]} opacity-10"></div>
       </div>
 
       {/* Floating elements for visual interest */}
-      <div className="absolute top-1/4 left-10 w-12 h-12 rounded-full bg-indigo-300 opacity-20 animate-float"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-24 h-24 rounded-full bg-blue-300 opacity-20 animate-float animation-delay-2000"></div>
-      <div className="absolute top-1/3 right-10 w-16 h-16 rounded-full bg-indigo-300 opacity-20 animate-float animation-delay-4000"></div>
+      <div className="absolute top-1/4 left-10 w-12 h-12 rounded-full bg-indigo-100 opacity-20 animate-float"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-24 h-24 rounded-full bg-blue-100 opacity-20 animate-float animation-delay-2000"></div>
+      <div className="absolute top-1/3 right-10 w-16 h-16 rounded-full bg-indigo-100 opacity-20 animate-float animation-delay-4000"></div>
 
       <Element name="hero">
         <div className="container relative">
@@ -145,7 +145,7 @@ const Hero = () => {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
                   </span>
-                  <span>LIVE Interactive Daily Classes</span>
+                  <span>LIVE Python Programming Classes</span>
                   <div className="ml-3 border-l border-indigo-200 pl-3">
                     <span className="text-xs font-normal">Next class in</span>
                     <span className="ml-1 font-semibold">{`${countdown.hours}:${countdown.minutes}:${countdown.seconds}`}</span>
@@ -642,27 +642,7 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  {/* Companies grid */}
-                  <div className="mb-5">
-                    <p className="text-xs font-medium text-gray-500 mb-2 text-center">
-                      OUR STUDENTS WORK AT
-                    </p>
-                    <div className="grid grid-cols-4 gap-3">
-                      {["Google", "Microsoft", "Amazon", "Meta"].map(
-                        (company, i) => (
-                          <div
-                            key={i}
-                            className="bg-indigo-50 p-2 rounded-lg text-center"
-                          >
-                            <p className="text-xs font-semibold text-indigo-700">
-                              {company}
-                            </p>
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </div>
-
+                  
                   {/* CTA Button */}
                   <a
                     href="#free-trial"
@@ -704,7 +684,7 @@ const Hero = () => {
                   <div className="mt-4 bg-white bg-opacity-70 backdrop-blur-sm rounded-lg p-3 border border-gray-100 shadow-sm">
                     <div className="flex items-center gap-3">
                       <img
-                        src="https://randomuser.me/api/portraits/women/42.jpg"
+                        src="https://randomuser.me/api/portraits/men/42.jpg"
                         alt="Student testimonial"
                         className="w-10 h-10 rounded-full border-2 border-indigo-100"
                       />
@@ -722,12 +702,10 @@ const Hero = () => {
                           ))}
                         </div>
                         <p className="text-xs text-gray-700 italic">
-                          "This bootcamp changed my life! I landed a job at
-                          Google just 3 months after completing the Python
-                          course."
+                          "He is very interactive and fun and the lessons are worth it."
                         </p>
                         <p className="text-xs font-semibold text-indigo-800 mt-1">
-                          - Priya S., Software Developer
+                          - Aaron
                         </p>
                       </div>
                     </div>

@@ -217,11 +217,11 @@ const Features = () => {
   const placement = useCountUp(revealed ? 89 : 0);
 
   return (
-    <section ref={sectionRef} className={`py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+    <section ref={sectionRef} className={`py-24 bg-white relative overflow-hidden transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       {/* Background elements for visual interest */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-50 rounded-full opacity-50 blur-3xl"></div>
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-50 rounded-full opacity-50 blur-3xl"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-100 to-transparent"></div>
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-50 rounded-full opacity-30 blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-50 rounded-full opacity-30 blur-3xl"></div>
       
       <Element name="features">
         <div className="container relative z-10">
