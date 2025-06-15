@@ -48,7 +48,7 @@ const projects = [
     description:
       "A complete command-line Blackjack game, focusing on Python fundamentals, logic, and functions.",
     category: "python",
-    image: "../../public/images/projects/blackjack.png",
+    image: "/images/projects/blackjack.png",
     tech: ["Python"],
   },
   {
@@ -56,7 +56,7 @@ const projects = [
     description:
       "A comprehensive data analysis toolkit using Python, Pandas, and Matplotlib to process, analyze, and visualize real-world datasets.",
     category: "python",
-    image: "../../public/images/projects/data visualization suite.webp",
+    image: "/images/projects/data visualization suite.webp",
     tech: ["Python", "Pandas", "Matplotlib"],
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     description:
       "Recreations of the classic Snake and Pong games, built using Python with the Turtle module for graphics and event handling.",
     category: "python",
-    image: "../../public/images/projects/pong.png",
+    image: "/images/projects/pong.png",
     tech: ["Python", "Turtle Graphics"],
   },
   {
@@ -72,7 +72,7 @@ const projects = [
     description:
       "A desktop application with a graphical user interface (GUI) for generating and saving passwords securely using Tkinter and JSON file storage.",
     category: "python",
-    image: "../../public/images/projects/password.png",
+    image: "/images/projects/password.png",
     tech: ["Python", "Tkinter", "JSON"],
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     description:
       "A dynamic blog platform built with Flask, featuring RESTful routing, user authentication (implied by later course sections), CRUD operations for posts, and templating with Jinja.",
     category: "webdev",
-    image: "../../public/images/projects/blog.png",
+    image: "/images/projects/blog.png",
     tech: [
       "Python",
       "Flask",
@@ -112,7 +112,7 @@ const projects = [
     description:
       "A web scraping capstone project that automates data entry tasks by extracting information from websites using BeautifulSoup and interacting with web forms using Selenium.",
     category: "python",
-    image: "../../public/images/projects/dataentry.jpeg",
+    image: "/images/projects/dataentry.jpeg",
     tech: ["Python", "Selenium", "BeautifulSoup"],
   },
   {
@@ -120,7 +120,7 @@ const projects = [
     description:
       "Develop a custom RESTful API using Flask to manage a database of cafes, allowing for GET, POST, PUT/PATCH, and DELETE requests to interact with cafe data.",
     category: "webdev",
-    image: "../../public/images/projects/cafe.png",
+    image: "/images/projects/cafe.png",
     tech: ["Python", "Flask", "SQLAlchemy", "Postman (for testing)"],
   },
   {
@@ -128,7 +128,7 @@ const projects = [
     description:
       "A GUI application built with Tkinter for learning and memorization. Users can view questions, flip cards for answers, and track known cards, with data managed from a CSV file.",
     category: "python",
-    image: "../../public/images/projects/flashcard.png",
+    image: "/images/projects/flashcard.png",
     tech: ["Python", "Tkinter", "Pandas (for CSV handling)"],
   },
   {
@@ -136,7 +136,7 @@ const projects = [
     description:
       "A web application using Flask and SQLAlchemy to create a personalized website showcasing a user's top 10 movies. Features include adding movies, editing ratings/reviews, and deleting entries from a SQLite database.",
     category: "webdev",
-    image: "../../public/images/projects/movies.png",
+    image: "/images/projects/movies.png",
     tech: [
       "Python",
       "Flask",
