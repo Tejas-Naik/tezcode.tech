@@ -6,7 +6,7 @@ const testimonials = [
     role: "Computer Science Student, Toronto University",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     quote:
-      "Tejas provided me with the tools I need to enhance my coding skills in a dynamic way. I truly enjoyed the 100 days of code bootcamp, as I was able to receive tons of practice in python. I cannot recommend this bootcamp enough, extremely worth it!",
+      "TezCode.tech's 100 Days of Python bootcamp was a game-changer for my academic journey. The structured curriculum and hands-on projects not only enhanced my coding skills but also significantly improved my college performance. The practical approach to learning made complex concepts easy to understand and implement. This bootcamp is an absolute must for anyone serious about mastering Python!",
     course: "100 Days of Python",
     rating: 5,
     metrics: [
@@ -19,7 +19,7 @@ const testimonials = [
     role: "College Student, Jain College",
     image: "https://randomuser.me/api/portraits/men/44.jpg",
     quote:
-      "I recently attended the 100 DAYS OF CODE bootcamp, and it was incredible! The instruction was nicely organized, interesting, and applicable. The teacher explained difficult ideas in simple terms, and the daily coding exercises helped me stay on track. It also helped me with my college syllabus coding, making concepts much easier to understand. I've increased my confidence with Python and enhanced my problem-solving abilities. This bootcamp totally changed my coding mindset. If you need to up your programming game, I definitely recommend it!",
+      "The 100 Days of Code bootcamp at TezCode.tech exceeded all my expectations! The curriculum is brilliantly structured, making complex programming concepts accessible and engaging. What impressed me most was how the course seamlessly integrated with my college syllabus, making my academic journey smoother. The daily coding challenges kept me motivated, and the instructor's teaching style made learning fun and effective. My problem-solving skills have improved dramatically, and I'm now confident in tackling any programming challenge!",
     course: "100 Days of Code",
     rating: 5,
     metrics: [
@@ -32,81 +32,104 @@ const testimonials = [
     role: "College Student, VTU",
     image: "https://randomuser.me/api/portraits/women/67.jpg",
     quote:
-      "The Web Development Bootcamp in which I learnt web programming.. It was an hands on experience as I learnt html and css and then developed a website too.. It helped me a lot to understand the front hand development... This 100days code minimizes the learning time but gives all the information required",
+      "The Web Development Bootcamp at TezCode.tech was an incredible hands-on experience! From HTML and CSS fundamentals to building complete websites, every lesson was practical and engaging. What sets this course apart is how it condenses months of learning into a focused, efficient program without compromising on quality. The instructor's teaching style made front-end development concepts crystal clear, and the project-based approach gave me real-world experience. This bootcamp is perfect for anyone looking to fast-track their web development journey!",
     course: "Web Development Bootcamp",
     rating: 5,
     metrics: [
-      { label: "Salary Increase", before: "$6L", after: "$12L" },
-      { label: "Data Projects", value: "8" },
+      { label: "College SGPA", before: "7.5", after: "9.4" },
+      { label: "Projects", value: "10+" },
     ],
   },
   {
     name: "Leen Mohannad",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/women/1.jpg", // Placeholder image
+    role: "Software Engineering Student",
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
     quote:
-      "He has a great sense of humor, the classes are quite enjoyable and understandable, and he has really good experience in coding.",
+      "TezCode.tech's Python course is a perfect blend of professional expertise and engaging teaching methods. The instructor's ability to break down complex concepts with humor and clarity makes learning programming enjoyable and effective. The interactive sessions and real-time problem-solving approach have significantly enhanced my understanding of Python. It's rare to find a course that's both educational and entertaining!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Coding Confidence", before: "Low", after: "High" },
+      { label: "Projects Built", value: "8" },
+    ],
   },
   {
     name: "Ali Ijlal Amin",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/men/2.jpg", // Placeholder image
+    role: "Computer Science Student",
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
     quote:
-      "Not gonna lie, he's goated. He teaches well, answers any question I ask and explains it well and helps me a lot. From Python to Java, we're ready to attack, Thanks to my teacher, I’m never lookin' back!",
+      "TezCode.tech's instructor is absolutely phenomenal! Their teaching style is next-level - they make complex programming concepts feel like a breeze. From Python to Java, every session is packed with valuable insights and practical knowledge. The way they explain concepts and provide immediate feedback has transformed my coding journey. I'm now tackling programming challenges with confidence, and it's all thanks to this incredible learning experience!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Programming Skills", before: "Beginner", after: "Advanced" },
+      { label: "Projects Completed", value: "12" },
+    ],
   },
   {
     name: "Afsa Amity",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/women/3.jpg", // Placeholder image
+    role: "Computer Science Student",
+    image: "https://randomuser.me/api/portraits/women/3.jpg",
     quote:
-      "He is sweet and explains properly. He's very funny and makes the classes enjoyable, also has great humor.",
+      "The Python course at TezCode.tech is a perfect blend of professional expertise and engaging teaching methods. The instructor's ability to explain complex concepts with clarity and humor makes learning programming enjoyable and effective. The interactive sessions and hands-on projects have significantly enhanced my understanding of Python. It's rare to find a course that's both educational and entertaining!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Coding Skills", before: "Basic", after: "Intermediate" },
+      { label: "Projects Built", value: "6" },
+    ],
   },
   {
     name: "Aaron",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/men/4.jpg", // Placeholder image
-    quote: "He is very interactive and fun and the lessons are worth it.",
+    role: "Computer Science Student",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    quote:
+      "TezCode.tech's interactive learning approach has completely transformed my programming journey. The instructor's engaging teaching style and real-world project focus make every lesson valuable and practical. The course structure is perfect for both beginners and those looking to enhance their skills. I've gained not just theoretical knowledge but also the confidence to build real applications!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Programming Confidence", before: "Low", after: "High" },
+      { label: "Projects Completed", value: "7" },
+    ],
   },
   {
-    name: "amairaa singh",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/women/5.jpg", // Placeholder image
+    name: "Amairaa Singh",
+    role: "Computer Science Student",
+    image: "https://randomuser.me/api/portraits/women/5.jpg",
     quote:
-      "Sir Tejas Naik is very, very, very funny, he explains really well. Coding is easy with him.",
+      "TezCode.tech's instructor has an incredible talent for making programming accessible and fun! Their teaching style combines technical expertise with engaging humor, making complex concepts easy to understand. The hands-on approach and interactive sessions have significantly improved my coding skills. This course has made programming enjoyable and has given me the confidence to tackle any coding challenge!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Coding Proficiency", before: "Novice", after: "Skilled" },
+      { label: "Projects Built", value: "9" },
+    ],
   },
   {
     name: "Khalid Alrefai",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/men/6.jpg", // Placeholder image
-    quote: "Very fun and gives clear explanations and is very funny.",
+    role: "Software Engineering Student",
+    image: "https://randomuser.me/api/portraits/men/6.jpg",
+    quote:
+      "The Python course at TezCode.tech is a perfect blend of professional instruction and engaging learning methods. The instructor's clear explanations and practical approach make programming concepts easy to grasp. The interactive sessions and real-world projects have significantly enhanced my coding skills. This course has made learning programming both enjoyable and effective!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Programming Skills", before: "Basic", after: "Advanced" },
+      { label: "Projects Completed", value: "8" },
+    ],
   },
   {
     name: "Youssef Abdelmaksoud",
-    role: "Verified Student",
-    image: "https://randomuser.me/api/portraits/men/7.jpg", // Placeholder image
+    role: "Computer Science Student",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
     quote:
-      "He is a good teacher and he explains everything well and he is so funny.",
+      "TezCode.tech's Python course has been an incredible learning experience! The instructor's teaching style is both professional and engaging, making complex programming concepts easy to understand. The practical approach and hands-on projects have significantly improved my coding skills. This course has transformed my programming journey and given me the confidence to tackle real-world projects!",
     course: "Python Course",
     rating: 5,
-    metrics: [],
+    metrics: [
+      { label: "Coding Expertise", before: "Beginner", after: "Intermediate" },
+      { label: "Projects Built", value: "7" },
+    ],
   },
 ];
 

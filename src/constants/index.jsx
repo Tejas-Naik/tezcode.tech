@@ -1,26 +1,24 @@
 export const features = [
   {
     id: "0",
-    icon: "/images/feature-1.png",
-    caption: "Easy integration",
-    title: "Work smarter not harder",
-    text: "With Xora, tedious tasks are history. Automation and smart processes bring your productivity to new heights. It's like having an extra cup of coffee, but without the jitters.",
-    button: {
-      icon: "/images/magictouch.svg",
-      title: "Watch the demo",
-    },
+    title: "Expert-Led Learning",
+    text: "Learn from industry experts with years of real-world experience. Our instructors are passionate about teaching and dedicated to your success.",
   },
   {
     id: "1",
-    icon: "/images/feature-2.png",
-    caption: "Secure & trustworthy",
-    title: "Sleep easy, we got your back",
-    text: "Your data security is our priority. With state-of-the-art encryption and robust privacy controls, Xora helps keeps your information secure and locked up tighter than Fort Knox.",
-    button: {
-      icon: "/images/docs.svg",
-      title: "Read the docs",
-    },
+    title: "Project-Based Curriculum",
+    text: "Master Python through hands-on projects. Build real-world applications, from web development to data science, while learning industry best practices.",
   },
+  {
+    id: "2",
+    title: "Personalized Mentorship",
+    text: "Get 1-on-1 guidance from experienced mentors. Regular feedback sessions ensure you're on track and help you overcome any challenges.",
+  },
+  {
+    id: "3",
+    title: "Career Support",
+    text: "Comprehensive career services including resume building, interview preparation, and job placement assistance to help you land your dream tech job.",
+  }
 ];
 
 export const details = [
@@ -49,93 +47,73 @@ export const details = [
 export const faq = [
   {
     id: "0",
-    question: "How easy is it to setup Xora?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+    question: "How are the classes conducted?",
+    answer: "Classes are conducted live via Zoom for 1-2 hours every day. We focus on project-based learning where you'll build one project each day while learning new concepts."
   },
   {
     id: "1",
-    question: "Can I integrate Xora with other platforms?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+    question: "Do I need prior programming experience?",
+    answer: "No prior programming experience is required. Our course is designed for beginners and will take you from the basics to advanced concepts."
   },
   {
     id: "2",
-    question: "How often do you add new content?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+    question: "What is the class schedule?",
+    answer: "We conduct classes 5 days a week. The exact timing will be discussed and decided based on student availability to ensure maximum participation."
   },
   {
     id: "3",
-    question: "What your refund policy?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+    question: "Can I try before enrolling?",
+    answer: "Yes! We offer one free trial class so you can experience our teaching methodology and decide if it's right for you."
   },
   {
     id: "4",
-    question: "Do you have corporate plans?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+    question: "What software do I need?",
+    answer: "We'll help you set up all required software like VS Code or PyCharm during the course. All software we use is free and industry-standard."
   },
   {
     id: "5",
-    question: "What happens when I’m out of storage?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
-  {
-    id: "6",
-    question: "Can I upgrade my plan?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
-  {
-    id: "7",
-    question: "How do I invite my team?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
-  {
-    id: "8",
-    question: "Do you offer training for individuals and teams?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
-  {
-    id: "9",
-    question: "I’m locked out of my account what do I do?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
+    question: "How do I make payments?",
+    answer: "We accept payments through Stripe and PayPal. You can choose between our monthly plan at $499/month or save 25% by paying the full course fee of $1,499 upfront."
+  }
 ];
 
 export const plans = [
   {
     id: "0",
-    title: "Core",
-    priceMonthly: 19,
-    priceYearly: 12,
-    caption: "Best for solo creators",
+    title: "Monthly Plan",
+    price: 499,
+    caption: "Pay monthly and learn at your own pace",
     features: [
-      "100MB Cloud storage",
-      "100+ prompt templates",
-      "5 projects",
-      "24/7 support",
+      "Live Interactive Classes",
+      "Recorded Session Access",
+      "Hands-on Projects",
+      "Career Guidance",
+      "Interview Preparation",
+      "Resume Building",
+      "Personalized Mentorship",
+      "Project Reviews & Feedback",
+      "1-on-1 Weekly Coaching Sessions",
+      "Portfolio Development Support",
+      "Job Placement Assistance",
+      "Lifetime Course Updates",
+      "Industry Partner Networking",
+      "Capstone Project Mentorship",
+      "AI Tools & Advanced Resources",
+      "Certificate of Completion"
     ],
     icon: "/images/circle.svg",
     logo: "/images/plan-1.png",
   },
   {
     id: "1",
-    title: "Overdrive",
-    priceMonthly: 79,
-    priceYearly: 59,
-    caption: "Most popular plan",
+    title: "Full Course",
+    price: 1499,
+    caption: "Best value - Save 25% with one-time payment",
     features: [
-      "All Starter features",
-      "1TB additional storage",
-      "Unlimited projects",
-      "Analytics",
+      "All Monthly Plan Features",
+      "25% Savings",
+      "One-time Payment",
+      "Full 4-month Program Access"
     ],
     icon: "/images/triangle.svg",
     logo: "/images/plan-2.png",
@@ -160,52 +138,32 @@ export const plans = [
 export const testimonials = [
   {
     id: "0",
-    name: "Jessica Saunders",
-    role: "Globalnomads",
-    avatarUrl: "/images/testimonials/jessica-saunders.png",
-    comment:
-      "Xora's customer support is second to none! They’re like my tech superheroes, always there when I need them.",
+    quote: "TezCode.tech transformed my career! The project-based learning approach helped me build a strong portfolio and land my first tech job.",
+    author: "Sarah Chen",
+    role: "Python Developer",
+    company: "Tech Solutions Inc."
   },
   {
     id: "1",
-    name: "Mark Erixon",
-    role: "Vid capital intl",
-    avatarUrl: "/images/testimonials/mark-erixon.png",
-    comment:
-      "I was skeptical at first, but now I can't imagine our content operations without it. It's that impactful.",
+    quote: "The personalized mentorship and career guidance at TezCode.tech were invaluable. I went from zero coding experience to a full-stack developer in just 4 months!",
+    author: "Michael Rodriguez",
+    role: "Full Stack Developer",
+    company: "Innovate Tech"
   },
   {
     id: "2",
-    name: "Melanie Hurst",
-    role: "Cyberleap",
-    avatarUrl: "/images/testimonials/melanie-hurst.png",
-    comment:
-      "Adopting this software was a breeze. It's made everyday tasks so much simpler.",
+    quote: "The instructors at TezCode.tech are amazing! They break down complex concepts into easy-to-understand lessons and provide excellent support throughout the course.",
+    author: "Emily Thompson",
+    role: "Data Scientist",
+    company: "Data Insights Co."
   },
   {
     id: "3",
-    name: "Alicia Barker",
-    role: "Cyberleap",
-    avatarUrl: "/images/testimonials/alicia-barker.png",
-    comment:
-      "The analytics feature is like having a personal fortune teller. It's been instrumental in guiding our business decisions.",
-  },
-  {
-    id: "4",
-    name: "Becky Snider",
-    role: "Floclips",
-    avatarUrl: "/images/testimonials/becky-snider.png",
-    comment:
-      "Switched to Xora last month, and I'm already seeing results. Best decision for our team!",
-  },
-  {
-    id: "5",
-    name: "Jim Bradley",
-    role: "Vid capital intl",
-    avatarUrl: "/images/testimonials/jim-bradley.png",
-    comment:
-      "The efficiency boost is undeniable. This platform has transformed our workflow, forever.",
-  },
+    quote: "The hands-on projects and real-world applications at TezCode.tech gave me the confidence to tackle any programming challenge. Best investment in my career!",
+    author: "David Kim",
+    role: "Software Engineer",
+    company: "Future Tech"
+  }
 ];
 
 export const logos = [

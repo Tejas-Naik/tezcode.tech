@@ -1,7 +1,6 @@
 import { Element } from "react-scroll";
 import { useState, useRef } from "react";
 import { faq } from "../constants";
-import clsx from "clsx";
 
 // FAQ categories for organization
 const faqCategories = [
@@ -185,6 +184,15 @@ const Faq = () => {
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-white text-indigo-600 hover:bg-gray-100 transition-colors duration-300 shadow-sm font-medium"
                 >
                   Contact Us
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-white text-indigo-600 hover:bg-gray-100 transition-colors duration-300 shadow-sm font-medium"
+                >
+                  Book a Call Now
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

@@ -5,93 +5,93 @@ import { Element, Link as ScrollLink } from "react-scroll";
 // Enhanced comparison data for plans
 const featureComparisonData = [
   {
-    feature: "Daily LIVE Classes (2 hours)",
+    feature: "Live Interactive Classes",
     basic: true,
     pro: true,
     premium: true,
   },
   {
-    feature: "Access to Course Materials",
+    feature: "Recorded Session Access",
     basic: true,
     pro: true,
     premium: true,
   },
   {
-    feature: "100+ Coding Projects",
+    feature: "Hands-on Projects",
     basic: true,
     pro: true,
     premium: true,
   },
   {
-    feature: "WhatsApp Community Access",
+    feature: "Career Guidance",
     basic: true,
     pro: true,
     premium: true,
   },
   {
-    feature: "Discord Community Access",
-    basic: false,
+    feature: "Interview Preparation",
+    basic: true,
+    pro: true,
+    premium: true,
+  },
+  {
+    feature: "Resume Building",
+    basic: true,
     pro: true,
     premium: true,
   },
   {
     feature: "Personalized Mentorship",
-    basic: false,
+    basic: true,
     pro: true,
     premium: true,
   },
   {
     feature: "Project Reviews & Feedback",
-    basic: false,
+    basic: true,
     pro: true,
     premium: true,
   },
   {
     feature: "1-on-1 Weekly Coaching Sessions",
-    basic: false,
-    pro: false,
-    premium: true,
-  },
-  {
-    feature: "Interview Preparation",
-    basic: false,
-    pro: false,
+    basic: true,
+    pro: true,
     premium: true,
   },
   {
     feature: "Portfolio Development Support",
-    basic: false,
+    basic: true,
     pro: true,
     premium: true,
   },
   {
     feature: "Job Placement Assistance",
-    basic: false,
-    pro: false,
+    basic: true,
+    pro: true,
     premium: true,
   },
   {
     feature: "Lifetime Course Updates",
-    basic: false,
-    pro: false,
+    basic: true,
+    pro: true,
     premium: true,
   },
   {
     feature: "Industry Partner Networking",
-    basic: false,
-    pro: false,
+    basic: true,
+    pro: true,
     premium: true,
   },
   {
     feature: "Capstone Project Mentorship",
-    basic: false,
+    basic: true,
     pro: true,
     premium: true,
   },
   {
     feature: "AI Tools & Advanced Resources",
-    basic: false,
-    pro: false,
+    basic: true,
+    pro: true,
     premium: true,
   },
   {
@@ -125,54 +125,51 @@ const Pricing = () => {
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-900">
               Invest in Your Tech Future Today
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-8">
               Get access to expert-led Python courses with interactive live
               sessions, real-world projects, and personalized mentorship
               tailored to accelerate your career.
             </p>
+            <a
+              href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Schedule a Free Consultation
+            </a>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Basic Plan */}
+          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Monthly Plan */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-100 flex flex-col">
               <div className="p-6 text-center border-b border-blue-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Starter Plan
+                  Monthly Plan
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Perfect for beginners exploring Python
+                  Pay monthly and learn at your own pace
                 </p>
                 <div className="flex justify-center items-baseline mb-4">
                   <span className="text-3xl md:text-4xl font-bold text-gray-900">
-                    $299
+                    $499
                   </span>
                   <span className="text-gray-500 ml-1">/month</span>
                 </div>
                 <div className="text-xs text-gray-500 mb-4">
-                  12-month program
+                  4-month program (Total: $1,996)
                 </div>
                 <a
-                  href="#contact"
+                  href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full py-3 px-6 rounded-lg border-2 border-indigo-600 text-indigo-600 font-medium hover:bg-indigo-50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
-                  aria-label="Contact us about Starter Plan"
-                  data-inquiry-type="enroll"
                 >
                   Start Your Journey
                 </a>
-                {/* {checkout ? (
-                  <PayPal />
-                ) : (
-                  <button
-                    onClick={() => {
-                      setCheckOut(true);
-                    }}
-                  >
-                    Checkout
-                  </button>
-                )} */}
-
-                {/* <div id="js-sdk-container-T7GRYXHB9H5NL"></div> */}
-                   {/* <PayPalHostedButton /> */}
               </div>
               <div className="p-6 flex-grow">
                 <ul className="space-y-3">
@@ -222,43 +219,42 @@ const Pricing = () => {
               </div>
             </div>
 
-            {/* Pro Plan */}
+            {/* Full Course Plan */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-blue-500 flex flex-col transform scale-105 z-10">
               <div className="bg-blue-600 py-2 text-center">
                 <span className="text-xs font-bold uppercase tracking-wider text-white">
-                  Most Popular Choice
+                  Best Value
                 </span>
               </div>
               <div className="p-6 text-center border-b border-blue-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Pro Plan
+                  Full Course
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Comprehensive training with mentorship
+                  Pay once and save 25%
                 </p>
                 <div className="flex justify-center items-baseline mb-4">
                   <span className="text-3xl md:text-4xl font-bold text-gray-900">
-                    $399
+                    $1,499
                   </span>
-                  <span className="text-gray-500 ml-1">/month</span>
                 </div>
                 <div className="text-xs text-gray-500 mb-4">
-                  12-month program
+                  One-time payment for full 4-month program
                 </div>
                 <a
-                  href="#contact"
+                  href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full py-3 px-6 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  aria-label="Contact us about Pro Plan"
-                  data-inquiry-type="enroll"
                 >
-                  Advance Your Skills
+                  Get Full Access
                 </a>
               </div>
               <div className="p-6 flex-grow">
                 <ul className="space-y-3">
                   {featureComparisonData.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      {item.pro ? (
+                      {item.basic ? (
                         <svg
                           className="h-5 w-5 text-blue-500 mt-0.5 mr-2"
                           fill="none"
@@ -290,85 +286,8 @@ const Pricing = () => {
                         </svg>
                       )}
                       <span
-                        className={item.pro ? "text-gray-700" : "text-gray-400"}
-                      >
-                        {item.feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Premium Plan */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-200 flex flex-col bg-gradient-to-b from-white to-indigo-50">
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-2 text-center">
-                <span className="text-xs font-bold uppercase tracking-wider text-white">
-                  Complete Career Package
-                </span>
-              </div>
-              <div className="p-6 text-center border-b border-blue-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Career Accelerator
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Full course with career placement
-                </p>
-                <div className="flex justify-center items-baseline mb-4">
-                  <span className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    $999
-                  </span>
-                </div>
-                <div className="text-xs text-gray-500 mb-4">
-                  One-time payment (lifetime access)
-                </div>
-                <a
-                  href="#contact"
-                  className="block w-full py-3 px-6 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:from-indigo-700 hover:to-purple-700 transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer"
-                  aria-label="Contact us about Career Accelerator Plan"
-                  data-inquiry-type="enroll"
-                >
-                  Transform Your Career
-                </a>
-              </div>
-              <div className="p-6 flex-grow">
-                <ul className="space-y-3">
-                  {featureComparisonData.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      {item.premium ? (
-                        <svg
-                          className="h-5 w-5 text-indigo-500 mt-0.5 mr-2"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-5 w-5 text-gray-300 mt-0.5 mr-2"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      )}
-                      <span
                         className={
-                          item.premium ? "text-gray-700" : "text-gray-400"
+                          item.basic ? "text-gray-700" : "text-gray-400"
                         }
                       >
                         {item.feature}
@@ -376,13 +295,6 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 py-3 px-4 bg-purple-50 rounded-lg border border-purple-100">
-                  <p className="text-sm text-purple-700 font-medium">
-                    <span className="font-bold">BONUS:</span> Includes exclusive
-                    access to industry networking events and job placement
-                    services!
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -751,7 +663,7 @@ const Pricing = () => {
                       Average Price
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200 text-center font-bold text-blue-600">
-                      $299-$999
+                      $499/month or $1,499
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200 text-center">
                       $3,000-$30,000

@@ -195,10 +195,15 @@ const Hero = () => {
                   Start Your Journey
                 </a>
                 <a
-                  href="#courses"
-                  className="inline-block px-8 py-4 rounded-full border-2 border-blue-200 text-blue-700 font-semibold text-lg bg-white hover:bg-blue-50 hover:border-blue-400 transition-all duration-300 shadow-md"
+                  href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-8 py-4 rounded-full border-2 border-blue-200 text-blue-700 font-semibold text-lg bg-white hover:bg-blue-50 hover:border-blue-400 transition-all duration-300 shadow-md flex items-center gap-2"
                 >
-                  See Courses
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Schedule 1:1 Call
                 </a>
               </div>
 
@@ -645,7 +650,7 @@ const Hero = () => {
                   
                   {/* CTA Button */}
                   <a
-                    href="#free-trial"
+                    href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
                     className="group relative block text-center w-full py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-medium transition overflow-hidden shadow-md"
                   >
                     <span className="absolute right-0 top-0 h-full w-10 bg-white bg-opacity-20 transform -skew-x-15 translate-x-10 group-hover:translate-x-40 transition-transform duration-700"></span>

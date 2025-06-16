@@ -277,13 +277,22 @@ const Courses = () => {
 
                 <div className="mt-6">
                   {course.status === "open" ? (
-                    <a
-                      href="#contact" // Link to your contact section
-                      className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-semibold cursor-pointer text-lg"
-                      data-inquiry-type={`enroll-${course.title.replace(/\s+/g, "-")}`}
-                    >
-                      Learn More & Enroll
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a
+                        href="#pricing"
+                        className={`flex-1 text-center items-center justify-center gap-2 px-6 py-3 rounded-xl ${index === 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-indigo-600 hover:bg-indigo-700'} text-white font-medium transition-colors duration-300`}
+                      >
+                        View Pricing
+                      </a>
+                      <a
+                        href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 text-center px-6 py-3 rounded-xl border-2 border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-300"
+                      >
+                        Schedule Free Consultation
+                      </a>
+                    </div>
                   ) : (
                     <button
                       className="inline-flex items-center px-6 py-3 bg-gray-400 text-gray-800 rounded-lg cursor-not-allowed font-semibold text-lg"
@@ -406,15 +415,13 @@ const Courses = () => {
 
         <div className="mt-20 text-center">
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            <span className="font-semibold">Limited spots available!</span> We
-            keep our class sizes small to ensure personalized attention and
-            optimal learning for every student.
+            <span className="font-semibold">Start Your Journey Today!</span> Choose between our flexible monthly plan or save 25% with our full course package.
           </p>
           <a
-            href="#pricing" // Link to your pricing section
+            href="#pricing"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
-            Secure Your Spot Today
+            View Pricing Plans
             <svg
               className="w-5 h-5"
               fill="none"

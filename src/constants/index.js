@@ -41,48 +41,39 @@ export const courses = [
 
 export const pricing = [
   {
-    title: "Basic Plan",
-    price: {
-      monthly: 299,
-      yearly: 2999
-    },
-    features: [
-      "Daily Live Classes",
-      "5 Classes per Week",
-      "Project-based Learning",
-      "WhatsApp Community Access",
-      "Discord Community Access",
-      "One Free Trial Class"
-    ]
-  },
-  {
-    title: "Premium Plan",
-    price: {
-      monthly: 399,
-      yearly: 3999
-    },
-    features: [
-      "All Basic Plan Features",
-      "Priority Support",
-      "Project Reviews",
-      "Resume Review",
-      "Interview Preparation",
-      "Referral Benefits"
-    ]
-  },
-  {
-    title: "Enterprise Plan",
+    title: "Monthly Plan",
     price: {
       monthly: 499,
-      yearly: 4999
     },
     features: [
-      "All Premium Plan Features",
-      "1-on-1 Mentoring Sessions",
-      "Custom Learning Path",
+      "Live Interactive Classes",
+      "Recorded Session Access",
+      "Hands-on Projects",
       "Career Guidance",
-      "LinkedIn Profile Review",
-      "Job Referrals"
+      "Interview Preparation",
+      "Resume Building",
+      "Personalized Mentorship",
+      "Project Reviews & Feedback",
+      "1-on-1 Weekly Coaching Sessions",
+      "Portfolio Development Support",
+      "Job Placement Assistance",
+      "Lifetime Course Updates",
+      "Industry Partner Networking",
+      "Capstone Project Mentorship",
+      "AI Tools & Advanced Resources",
+      "Certificate of Completion"
+    ]
+  },
+  {
+    title: "Full Course",
+    price: {
+      oneTime: 1499,
+    },
+    features: [
+      "All Monthly Plan Features",
+      "25% Savings",
+      "One-time Payment",
+      "Full 4-month Program Access"
     ]
   }
 ];
@@ -110,7 +101,7 @@ export const faq = [
   },
   {
     question: "How do I make payments?",
-    answer: "We accept payments through Stripe and PayPal. You can choose between monthly or yearly plans with significant savings on yearly subscriptions."
+    answer: "We accept payments through Stripe and PayPal. You can choose between our monthly plan at $499/month or save 25% by paying the full course fee of $1,499 upfront."
   }
 ];
 

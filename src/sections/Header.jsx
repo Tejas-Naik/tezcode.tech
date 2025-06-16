@@ -171,12 +171,21 @@ const Header = () => {
                     ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                     : "text-gray-800 hover:text-blue-600"
               }`}
-              onClick={() => setActiveSection(link.id)} // Keep onClick for immediate active state update
+              onClick={() => setActiveSection(link.id)}
               aria-current={activeSection === link.id ? "page" : undefined}
             >
               {link.title}
             </a>
           ))}
+          <a
+            href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md flex items-center gap-2 group"
+          >
+            <span>Book a Call</span>
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 text-white text-xs font-bold animate-pulse">Now</span>
+          </a>
         </nav>
 
         {/* Progress Indicator (shows navigation position) */}

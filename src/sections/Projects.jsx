@@ -1,47 +1,3 @@
-// const projects = [
-//   {
-//     title: "Ecommerce Platform",
-//     description: "A full-stack online store with payment processing, user accounts, and inventory management.",
-//     category: "python",
-//     image: "https://placehold.co/600x400/e2e8f0/475569?text=Ecommerce+Platform",
-//     tech: ["Python", "Django", "PostgreSQL", "React", "Stripe"]
-//   },
-//   {
-//     title: "2D Games (Snake and Pong)",
-//     description: "Interactive classic arcade games built with Python and modern game development libraries.",
-//     category: "python",
-//     image: "https://placehold.co/600x400/e2e8f0/475569?text=2D+Games",
-//     tech: ["Python", "Pygame", "Tkinter", "Numpy"]
-//   },
-//   {
-//     title: "Blog Website",
-//     description: "Fully-featured blog with admin panel, content management system, and responsive design.",
-//     category: "webdev",
-//     image: "https://placehold.co/600x400/e2e8f0/475569?text=Blog+Website",
-//     tech: ["React", "Node.js", "MongoDB", "Express"]
-//   },
-//   {
-//     title: "Data Entry Automation",
-//     description: "Build scripts to automate repetitive data tasks using modern Python libraries and tools.",
-//     category: "python",
-//     image: "https://placehold.co/600x400/e2e8f0/475569?text=Data+Automation",
-//     tech: ["Python", "Pandas", "Selenium", "BeautifulSoup"]
-//   },
-//   {
-//     title: "Data Visualization with Data Science Libraries",
-//     description: "Create interactive dashboards using pandas, matplotlib, seaborn and other modern visualization tools.",
-//     category: "python",
-//     image: "https://placehold.co/600x400/e2e8f0/475569?text=Data+Visualization",
-//     tech: ["Python", "Pandas", "Matplotlib", "Seaborn", "Plotly"]
-//   },
-//   {
-//     title: "Personal Portfolio Website",
-//     description: "Design and develop your own professional portfolio website to showcase your skills and projects.",
-//     category: "webdev",
-//     image: "https://placehold.co/600x400/e2e8f0/475569?text=Portfolio+Website",
-//     tech: ["HTML", "CSS", "JavaScript", "React"]
-//   }
-// ];
 const projects = [
   {
     title: "Blackjack Capstone Project",
@@ -50,6 +6,7 @@ const projects = [
     category: "python",
     image: "/images/projects/blackjack.png",
     tech: ["Python"],
+    duration: "Day 11"
   },
   {
     title: "Python Data Analysis Suite",
@@ -58,6 +15,7 @@ const projects = [
     category: "python",
     image: "/images/projects/data visualization suite.webp",
     tech: ["Python", "Pandas", "Matplotlib"],
+    duration: "Day 70+"
   },
   {
     title: "Arcade Classics: Snake & Pong",
@@ -66,6 +24,7 @@ const projects = [
     category: "python",
     image: "/images/projects/pong.png",
     tech: ["Python", "Turtle Graphics"],
+    duration: "Day 20"
   },
   {
     title: "Password Manager GUI App",
@@ -74,6 +33,7 @@ const projects = [
     category: "python",
     image: "/images/projects/password.png",
     tech: ["Python", "Tkinter", "JSON"],
+    duration: "Day 28"
   },
   {
     title: "Flight Deal Finder & Club",
@@ -88,6 +48,7 @@ const projects = [
       "datetime",
       "JSON",
     ],
+    duration: "Day 48"
   },
   {
     title: "Full-Featured Blog Website",
@@ -106,6 +67,7 @@ const projects = [
       "Bootstrap",
       "REST APIs",
     ],
+    duration: "Day 69"
   },
   {
     title: "Automated Data Entry Bot",
@@ -114,6 +76,7 @@ const projects = [
     category: "python",
     image: "/images/projects/dataentry.jpeg",
     tech: ["Python", "Selenium", "BeautifulSoup"],
+    duration: "Day 62"
   },
   {
     title: "Custom REST API (Cafe & Wifi)",
@@ -122,6 +85,7 @@ const projects = [
     category: "webdev",
     image: "/images/projects/cafe.png",
     tech: ["Python", "Flask", "SQLAlchemy", "Postman (for testing)"],
+    duration: "Day 49"
   },
   {
     title: "Flash Card App (Capstone)",
@@ -130,6 +94,7 @@ const projects = [
     category: "python",
     image: "/images/projects/flashcard.png",
     tech: ["Python", "Tkinter", "Pandas (for CSV handling)"],
+    duration: "Day 32"
   },
   {
     title: "Top 10 Movies Website",
@@ -146,6 +111,7 @@ const projects = [
       "CSS",
       "Bootstrap",
     ],
+    duration: "Day 67"
   },
   {
     title: "+ 90 More",
@@ -160,6 +126,7 @@ const projects = [
       "Automation",
       "Bots",
     ],
+    duration: "90 Days"
   },
 ];
 
@@ -203,41 +170,40 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 flex-1">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg font-medium transition-colors duration-200 shadow-sm"
-                >
-                  <span>View Project</span>
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
+                <div className="mt-4">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <svg
+                      className="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>{project.duration}</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

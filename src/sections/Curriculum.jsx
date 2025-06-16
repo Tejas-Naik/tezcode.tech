@@ -433,9 +433,10 @@ const Curriculum = () => {
               ensure you master these skills
             </p>
             <div className="flex justify-center mt-12">
-              <ScrollLink
-                to="contact"
-                smooth={true}
+              <a
+                href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium text-lg inline-flex items-center cursor-pointer"
                 data-inquiry-type="enroll"
               >
@@ -453,7 +454,7 @@ const Curriculum = () => {
                   ></path>
                 </svg>
                 Enroll Now and Transform Your Career
-              </ScrollLink>
+              </a>
             </div>
           </div>
         </div>
