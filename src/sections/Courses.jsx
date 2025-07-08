@@ -61,7 +61,7 @@ const courses = [
     studentsHelped: 184,
     image: "https://placehold.co/800x600/e2e8f0/475569?text=Web+Dev+Course",
     badgeText: "High Demand",
-    status: "closed", // Added status: closed for this course
+    status: "open", // Added status: closed for this course
     techStack: [
       "HTML5, CSS3 & JavaScript ES6+",
       "React.js & Next.js",
