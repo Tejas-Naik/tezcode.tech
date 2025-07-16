@@ -9,7 +9,7 @@ const instructors = [
     experience: "5+ years teaching experience",
     credentials:
       "Computer Science graduate, Python expert with modern stack knowledge including FastAPI, Django, AI/ML and DevOps",
-    image: "/images/tejas.jpg", // Placeholder, ideally use a professional photo
+    image: "/images/tejas2.jpg", // Placeholder, ideally use a professional photo
     social: {
       linkedin: "#", // Replace with actual links
       github: "#", // Replace with actual links
@@ -37,7 +37,7 @@ const courses = [
       "Web Development",
       "Game Development",
       "APIs",
-      "Automation"
+      "Automation",
     ],
     features: [
       "Daily LIVE coding sessions",
@@ -150,7 +150,6 @@ const Courses = () => {
             personalized feedback.
           </p>
         </div>
-
 
         <div className="grid md:grid-cols-2 gap-8">
           {filteredCourses.map((course, index) => (
@@ -280,7 +279,7 @@ const Courses = () => {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
                         href="#pricing"
-                        className={`flex-1 text-center items-center justify-center gap-2 px-6 py-3 rounded-xl ${index === 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-indigo-600 hover:bg-indigo-700'} text-white font-medium transition-colors duration-300`}
+                        className={`flex-1 text-center items-center justify-center gap-2 px-6 py-3 rounded-xl ${index === 0 ? "bg-blue-600 hover:bg-blue-700" : "bg-indigo-600 hover:bg-indigo-700"} text-white font-medium transition-colors duration-300`}
                       >
                         View Pricing
                       </a>
@@ -415,7 +414,9 @@ const Courses = () => {
 
         <div className="mt-20 text-center">
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            <span className="font-semibold">Start Your Journey Today!</span> Choose between our flexible monthly plan or save 25% with our full course package.
+            <span className="font-semibold">Start Your Journey Today!</span>{" "}
+            Choose between our flexible monthly plan or save 25% with our full
+            course package.
           </p>
           <a
             href="#pricing"
