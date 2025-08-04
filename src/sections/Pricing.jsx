@@ -130,6 +130,42 @@ const Pricing = () => {
               sessions, real-world projects, and personalized mentorship
               tailored to accelerate your career.
             </p>
+            
+            {/* Trial Offer Banner */}
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl p-6 mb-8 shadow-lg">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Try Before You Buy!</h3>
+                  <p className="text-green-100">7-Day Trial for just $49</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="flex items-center">
+                  <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  7-Day Money Back Guarantee
+                </div>
+                <div className="flex items-center">
+                  <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Full Access to Live Classes
+                </div>
+                <div className="flex items-center">
+                  <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Cancel Anytime
+                </div>
+              </div>
+            </div>
+            
             <a
               href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
               target="_blank"
@@ -143,7 +179,75 @@ const Pricing = () => {
             </a>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Trial Plan */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-green-500 flex flex-col">
+              <div className="bg-green-600 py-2 text-center">
+                <span className="text-xs font-bold uppercase tracking-wider text-white">
+                  Start Here
+                </span>
+              </div>
+              <div className="p-6 text-center border-b border-green-100">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  7-Day Trial
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Try our live classes risk-free
+                </p>
+                <div className="flex justify-center items-baseline mb-4">
+                  <span className="text-3xl md:text-4xl font-bold text-gray-900">
+                    $49
+                  </span>
+                  <span className="text-gray-500 ml-1">/week</span>
+                </div>
+                <div className="text-xs text-gray-500 mb-4">
+                  Full access to live classes & community
+                </div>
+                <a
+                  href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-3 px-6 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                >
+                  Start Trial Now
+                </a>
+              </div>
+              <div className="p-6 flex-grow">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">7 days of live interactive classes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">Access to Discord community</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">Recorded session access</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">7-day money-back guarantee</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">Cancel anytime</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             {/* Monthly Plan */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-100 flex flex-col">
               <div className="p-6 text-center border-b border-blue-100">

@@ -12,6 +12,8 @@ import Footer from "./sections/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import PrerequisiteQuiz from "./components/PrerequisiteQuiz";
 import Testimonials from "./sections/Testimonials";
+import EmailCapture from "./components/EmailCapture";
+import WhatsAppButton from "./components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
@@ -52,6 +54,13 @@ const App = () => {
           <Contact />
           <Faq />
           <Footer />
+          
+          {/* Email Capture Popup */}
+          <EmailCapture />
+          
+          {/* WhatsApp Floating Button */}
+          <WhatsAppButton />
+          
           {/* Back to Top Button */}
           {showBackToTop && (
             <button
