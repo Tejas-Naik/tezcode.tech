@@ -2,6 +2,18 @@ import { useState, useEffect } from "react";
 
 const testimonials = [
   {
+    name: "Faisal Alhomsi",
+    role: "High School Student",
+    quote:
+      "Mr. Tejas Naik is hands down the best coding teacher! His lessons are super engaging, and he always takes the time to answer every question clearly. Learning Python with him is not just easy — it's actually fun! He's way better than any other coding teacher I've had. I built a lot of projects while I was going through the course which helped me a lot in my coding journey",
+    course: "100DaysOfCode",
+    rating: 5,
+    metrics: [
+      { label: "Coding Expertise", before: "Beginner", after: "Advanced" },
+      { label: "Projects Built", value: "23" },
+    ],
+  },
+  {
     name: "Adrian Rodriguez",
     role: "Computer Science Student, Toronto University",
     quote:
