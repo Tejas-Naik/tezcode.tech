@@ -8,7 +8,7 @@ const instructors = [
     role: "Lead Python Instructor & Founder",
     experience: "5+ years teaching experience",
     credentials:
-      "Computer Science graduate, Python expert with modern stack knowledge including FastAPI, Django, AI/ML and DevOps",
+      "Self-taught developer with 7+ years of experience in web and game development. Skilled in Python, JS, React, Next.js, and APIs. Taught 500+ students.",
     image: "/images/tejas.jpg", // Placeholder, ideally use a professional photo
     social: {
       linkedin: "#", // Replace with actual links
