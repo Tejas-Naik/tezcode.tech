@@ -173,12 +173,12 @@ const EmailCapture = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {offerType === 'trial' ? 'Start Your 7-Day Trial' : 'Get Your Free Python Cheat Sheet'}
+                    {offerType === 'trial' ? 'Stop Failing Python Classes' : 'Get Your Python Success Blueprint'}
                   </h3>
                   <p className="text-gray-600">
                     {offerType === 'trial' 
-                      ? 'Join our live Python classes for just $49 and see the difference!'
-                      : 'Download our comprehensive Python cheat sheet with 100+ essential tips'
+                      ? 'Join 520+ students who went from failing to acing Python. 7-day trial for just $49!'
+                      : 'Download the exact cheat sheet that helped 94% of our students improve their grades'
                     }
                   </p>
                 </div>
@@ -255,7 +255,7 @@ const EmailCapture = () => {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 disabled:opacity-50"
                   >
-                    {isSubmitting ? 'Processing...' : offerType === 'trial' ? 'Start 7-Day Trial' : 'Get Free Cheat Sheet'}
+                    {isSubmitting ? 'Processing...' : offerType === 'trial' ? 'Start My 7-Day Trial Now' : 'Get My Success Blueprint'}
                   </button>
                 </form>
 

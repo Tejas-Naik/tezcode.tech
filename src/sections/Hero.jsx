@@ -192,7 +192,7 @@ const Hero = () => {
                   href="#prerequisite-quiz"
                   className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
                 >
-                  Start Your Journey
+                  Stop Failing Python Now
                 </a>
                 <a
                   href="https://calendar.app.google/7cqRrikvBjMEsY2s8"

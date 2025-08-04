@@ -4,7 +4,6 @@ const testimonials = [
   {
     name: "Adrian Rodriguez",
     role: "Computer Science Student, Toronto University",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
     quote:
       "TezCode.tech's 100 Days of Python bootcamp was a game-changer for my academic journey. The structured curriculum and hands-on projects not only enhanced my coding skills but also significantly improved my college performance. The practical approach to learning made complex concepts easy to understand and implement. This bootcamp is an absolute must for anyone serious about mastering Python!",
     course: "100 Days of Python",
@@ -17,7 +16,6 @@ const testimonials = [
   {
     name: "Abhishek Nasalapure",
     role: "College Student, Jain College",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
     quote:
       "The 100 Days of Code bootcamp at TezCode.tech exceeded all my expectations! The curriculum is brilliantly structured, making complex programming concepts accessible and engaging. What impressed me most was how the course seamlessly integrated with my college syllabus, making my academic journey smoother. The daily coding challenges kept me motivated, and the instructor's teaching style made learning fun and effective. My problem-solving skills have improved dramatically, and I'm now confident in tackling any programming challenge!",
     course: "100 Days of Code",
@@ -30,7 +28,6 @@ const testimonials = [
   {
     name: "Advika Gurav",
     role: "College Student, VTU",
-    image: "https://randomuser.me/api/portraits/women/67.jpg",
     quote:
       "The Web Development Bootcamp at TezCode.tech was an incredible hands-on experience! From HTML and CSS fundamentals to building complete websites, every lesson was practical and engaging. What sets this course apart is how it condenses months of learning into a focused, efficient program without compromising on quality. The instructor's teaching style made front-end development concepts crystal clear, and the project-based approach gave me real-world experience. This bootcamp is perfect for anyone looking to fast-track their web development journey!",
     course: "Web Development Bootcamp",
@@ -43,7 +40,6 @@ const testimonials = [
   {
     name: "Leen Mohannad",
     role: "Software Engineering Student",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
     quote:
       "TezCode.tech's Python course is a perfect blend of professional expertise and engaging teaching methods. The instructor's ability to break down complex concepts with humor and clarity makes learning programming enjoyable and effective. The interactive sessions and real-time problem-solving approach have significantly enhanced my understanding of Python. It's rare to find a course that's both educational and entertaining!",
     course: "Python Course",
@@ -56,7 +52,6 @@ const testimonials = [
   {
     name: "Ali Ijlal Amin",
     role: "Computer Science Student",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
     quote:
       "TezCode.tech's instructor is absolutely phenomenal! Their teaching style is next-level - they make complex programming concepts feel like a breeze. From Python to Java, every session is packed with valuable insights and practical knowledge. The way they explain concepts and provide immediate feedback has transformed my coding journey. I'm now tackling programming challenges with confidence, and it's all thanks to this incredible learning experience!",
     course: "Python Course",
@@ -69,7 +64,6 @@ const testimonials = [
   {
     name: "Afsa Amity",
     role: "Computer Science Student",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
     quote:
       "The Python course at TezCode.tech is a perfect blend of professional expertise and engaging teaching methods. The instructor's ability to explain complex concepts with clarity and humor makes learning programming enjoyable and effective. The interactive sessions and hands-on projects have significantly enhanced my understanding of Python. It's rare to find a course that's both educational and entertaining!",
     course: "Python Course",
@@ -82,7 +76,6 @@ const testimonials = [
   {
     name: "Aaron",
     role: "Computer Science Student",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
     quote:
       "TezCode.tech's interactive learning approach has completely transformed my programming journey. The instructor's engaging teaching style and real-world project focus make every lesson valuable and practical. The course structure is perfect for both beginners and those looking to enhance their skills. I've gained not just theoretical knowledge but also the confidence to build real applications!",
     course: "Python Course",
@@ -95,7 +88,6 @@ const testimonials = [
   {
     name: "Amairaa Singh",
     role: "Computer Science Student",
-    image: "https://randomuser.me/api/portraits/women/5.jpg",
     quote:
       "TezCode.tech's instructor has an incredible talent for making programming accessible and fun! Their teaching style combines technical expertise with engaging humor, making complex concepts easy to understand. The hands-on approach and interactive sessions have significantly improved my coding skills. This course has made programming enjoyable and has given me the confidence to tackle any coding challenge!",
     course: "Python Course",
@@ -108,7 +100,6 @@ const testimonials = [
   {
     name: "Khalid Alrefai",
     role: "Software Engineering Student",
-    image: "https://randomuser.me/api/portraits/men/6.jpg",
     quote:
       "The Python course at TezCode.tech is a perfect blend of professional instruction and engaging learning methods. The instructor's clear explanations and practical approach make programming concepts easy to grasp. The interactive sessions and real-world projects have significantly enhanced my coding skills. This course has made learning programming both enjoyable and effective!",
     course: "Python Course",
@@ -121,7 +112,6 @@ const testimonials = [
   {
     name: "Youssef Abdelmaksoud",
     role: "Computer Science Student",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
     quote:
       "TezCode.tech's Python course has been an incredible learning experience! The instructor's teaching style is both professional and engaging, making complex programming concepts easy to understand. The practical approach and hands-on projects have significantly improved my coding skills. This course has transformed my programming journey and given me the confidence to tackle real-world projects!",
     course: "Python Course",
@@ -144,11 +134,11 @@ const TestimonialCard = ({ testimonial, isActive }) => {
     >
       <div className="p-6 md:p-8">
         <div className="flex items-center mb-6">
-          <img
-            src={testimonial.image}
-            alt={testimonial.name}
-            className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
-          />
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center border-2 border-blue-100">
+            <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
           <div className="ml-4">
             <h4 className="text-xl font-bold text-gray-900">
               {testimonial.name}
@@ -247,12 +237,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Student Success Stories
+            From Failing to Acing Python
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our students come from diverse backgrounds but share one thing in
-            common: they've transformed their careers through our live
-            interactive classes
+            Real students who went from struggling with Python assignments to 
+            acing their programming courses. See their grade improvements below.
           </p>
         </div>
 

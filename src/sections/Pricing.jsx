@@ -123,12 +123,11 @@ const Pricing = () => {
               Flexible Pricing Plans
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-900">
-              Invest in Your Tech Future Today
+              Choose Your Path to Python Success
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Get access to expert-led Python courses with interactive live
-              sessions, real-world projects, and personalized mentorship
-              tailored to accelerate your career.
+              Stop struggling with Python assignments. Our proven system has helped 520+ students 
+              go from failing grades to acing their programming courses. Join them today.
             </p>
             
             {/* Trial Offer Banner */}
@@ -140,8 +139,8 @@ const Pricing = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">Try Before You Buy!</h3>
-                  <p className="text-green-100">7-Day Trial for just $49</p>
+                  <h3 className="text-2xl font-bold">Stop Failing Today!</h3>
+                  <p className="text-green-100">7-Day Trial for just $49 - See Results in 7 Days</p>
                 </div>
               </div>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
