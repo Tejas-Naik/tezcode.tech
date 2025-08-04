@@ -12,6 +12,7 @@ import Footer from "./sections/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import PrerequisiteQuiz from "./components/PrerequisiteQuiz";
 import Testimonials from "./sections/Testimonials";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -58,11 +59,22 @@ const App = () => {
               className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="Back to top"
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 15l7-7 7 7"
+                />
               </svg>
             </button>
           )}
+          <Analytics />
         </>
       )}
     </main>
