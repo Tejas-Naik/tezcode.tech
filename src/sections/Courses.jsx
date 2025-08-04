@@ -9,7 +9,7 @@ const instructors = [
     experience: "5+ years teaching experience",
     credentials:
       "Computer Science graduate, Python expert with modern stack knowledge including FastAPI, Django, AI/ML and DevOps",
-    image: "/images/tejas2.jpg", // Placeholder, ideally use a professional photo
+    image: "/images/tejas.jpg", // Placeholder, ideally use a professional photo
     social: {
       linkedin: "#", // Replace with actual links
       github: "#", // Replace with actual links
