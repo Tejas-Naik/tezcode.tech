@@ -9,7 +9,7 @@ const instructors = [
     experience: "5+ years teaching experience",
     credentials:
       "Self-taught developer with 7+ years of experience in web and game development. Skilled in Python, JS, React, Next.js, and APIs. Taught 500+ students.",
-    image: "/images/tejas.jpg", // Placeholder, ideally use a professional photo
+    image: "/images/tejas3.jpeg", // Placeholder, ideally use a professional photo
     social: {
       linkedin: "#", // Replace with actual links
       github: "#", // Replace with actual links
