@@ -7,7 +7,7 @@
 
 @layer base {
   html {
-    @apply bg-white;
+    @apply bg-white scroll-smooth;
   }
 
   body {
@@ -19,7 +19,7 @@
   }
 
   img {
-    @apply block max-w-full;
+    @apply block max-w-full h-auto;
   }
 
   button {
@@ -28,6 +28,31 @@
 
   input {
     @apply tracking-[-0.03em];
+  }
+
+  /* Improve tap target sizes on mobile */
+  @media (max-width: 640px) {
+    button, a, input, select, textarea {
+      @apply min-h-[44px] min-w-[44px];
+    }
+    
+    /* Improve readability on mobile */
+    p, li {
+      @apply text-base leading-relaxed;
+    }
+
+    /* Reduce font sizes for headings on mobile */
+    h1, .h1 {
+      @apply text-4xl leading-tight;
+    }
+    
+    h2, .h2 {
+      @apply text-3xl leading-tight;
+    }
+    
+    h3, .h3 {
+      @apply text-2xl leading-tight;
+    }
   }
 }
 

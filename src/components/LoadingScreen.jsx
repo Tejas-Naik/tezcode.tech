@@ -42,7 +42,7 @@ const LoadingScreen = memo(() => {
           Loading your experience...
         </div>
       </div>
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes pulse-slow {
           0%, 100% { transform: scale(0.8); opacity: 0.1; }
           50% { transform: scale(1.1); opacity: 0.2; }
@@ -66,7 +66,7 @@ const LoadingScreen = memo(() => {
         }
         .animate-blob { animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.35, 1); }
         .animation-delay-2000 { animation-delay: 2s; }
-      `}</style>
+      `}} />
     </div>
   );
 });

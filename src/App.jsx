@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react";
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import Features from "./sections/Features";
-import Courses from "./sections/Courses";
-import Curriculum from "./sections/Curriculum";
-import Projects from "./sections/Projects";
-import Pricing from "./sections/Pricing";
-import Contact from "./sections/Contact";
-import Faq from "./sections/Faq";
-import Footer from "./sections/Footer";
+import { useEffect, useState, lazy, Suspense } from "react";
 import LoadingScreen from "./components/LoadingScreen";
-import PrerequisiteQuiz from "./components/PrerequisiteQuiz";
-import Testimonials from "./sections/Testimonials";
-import EmailCapture from "./components/EmailCapture";
-import WhatsAppButton from "./components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
+
+// Lazy load components for better performance
+const Header = lazy(() => import("./sections/Header"));
+const Hero = lazy(() => import("./sections/Hero"));
+const Features = lazy(() => import("./sections/Features"));
+const Courses = lazy(() => import("./sections/Courses"));
+const Curriculum = lazy(() => import("./sections/Curriculum"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Pricing = lazy(() => import("./sections/Pricing"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Faq = lazy(() => import("./sections/Faq"));
+const Footer = lazy(() => import("./sections/Footer"));
+const PrerequisiteQuiz = lazy(() => import("./components/PrerequisiteQuiz"));
+const Testimonials = lazy(() => import("./sections/Testimonials"));
+const EmailCapture = lazy(() => import("./components/EmailCapture"));
+const WhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,7 +43,7 @@ const App = () => {
       {!isLoaded ? (
         <LoadingScreen />
       ) : (
-        <>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-pulse text-xl font-semibold">Loading...</div></div>}>
           <Header />
           <Hero />
           <PrerequisiteQuiz />
@@ -84,7 +86,7 @@ const App = () => {
             </button>
           )}
           <Analytics />
-        </>
+        </Suspense>
       )}
     </main>
   );
