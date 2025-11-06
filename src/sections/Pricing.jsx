@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { trackEvent } from "../../utils/analytics";
 
@@ -9,14 +10,25 @@ const Pricing = () => {
     "24/7 Discord & WhatsApp support",
   ];
 
-  const handleStripeCheckout = () => {
-    trackEvent("checkout_initiated");
-    // In a real application, you would make a request to your backend
-    // to create a Stripe Checkout session.
-    // For this example, we'll just log to the console.
-    console.log("Redirecting to Stripe Checkout...");
-    // window.location.href = "/your-stripe-checkout-url";
-  };
+  useEffect(() => {
+    if (window.paypal && window.paypal.HostedButtons) {
+      const container = document.getElementById("paypal-button-container");
+      if (container) {
+        // Clear the container before rendering to avoid PayPal SDK errors on re-render
+        container.innerHTML = "";
+        window.paypal
+          .HostedButtons({
+            hostedButtonId: "C3524266L3754",
+            onApprove: () => {
+              trackEvent("checkout_success");
+            },
+          })
+          .render("#paypal-button-container");
+      }
+    }
+    // We are intentionally not adding dependencies here to re-run this on every render,
+    // ensuring the PayPal button is always present.
+  }, []);
 
   return (
     <section id="pricing" className="py-20 text-white">
@@ -44,23 +56,19 @@ const Pricing = () => {
             ))}
           </ul>
 
-          <button
-            id="pricingCTA"
-            onClick={handleStripeCheckout}
-            className="mt-6 inline-block px-6 py-3 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-semibold shadow hover:scale-[1.02] transition transform"
-          >
-            Start 7-Day Crash Course — $49
-          </button>
+          <div id="paypal-button-container" className="mt-6"></div>
 
           <p className="mt-3 text-sm text-text-muted">
             💰 7-Day Money-Back Guarantee — full refund if you don’t see value.
           </p>
 
           <div className="mt-4 flex items-center justify-center gap-3 border-t border-white/5 pt-4">
-            <span className="text-sm text-text-muted">Secure checkout</span>
+            <span className="text-sm text-text-muted">
+              Secure checkout with
+            </span>
             <img
-              src="/icons/stripe.svg"
-              alt="Stripe logo"
+              src="/icons/paypal.svg"
+              alt="PayPal logo"
               className="h-5"
               aria-hidden="true"
             />
