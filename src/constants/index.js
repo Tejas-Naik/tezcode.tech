@@ -1,172 +1,185 @@
 export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#courses", label: "Courses" },
-  { href: "#pricing", label: "Pricing" },
+  { href: "#features", label: "Features" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
-
-export const courses = [
-  {
-    title: "100 Days of Python",
-    description: "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
-    features: [
-      "Python 3 fundamentals to professional concepts",
-      "Web development with Flask",
-      "Data Science & Machine Learning",
-      "Game Development",
-      "GUI Applications",
-      "Automation & Web Scraping"
-    ],
-    duration: "100 days",
-    dailyHours: "1-2 hours",
-    level: "Beginner to Advanced"
-  },
-  {
-    title: "Web Development Bootcamp",
-    description: "Comprehensive web development bootcamp covering frontend and backend technologies.",
-    features: [
-      "HTML5 & CSS3",
-      "JavaScript & React",
-      "Backend Development",
-      "Database Management",
-      "API Development",
-      "Deployment & Version Control"
-    ],
-    duration: "Coming Soon",
-    dailyHours: "1-2 hours",
-    level: "Beginner to Advanced"
-  }
-];
-
-export const pricing = [
-  {
-    title: "Monthly Plan",
-    price: {
-      monthly: 499,
-    },
-    features: [
-      "Live Interactive Classes",
-      "Recorded Session Access",
-      "Hands-on Projects",
-      "Career Guidance",
-      "Interview Preparation",
-      "Resume Building",
-      "Personalized Mentorship",
-      "Project Reviews & Feedback",
-      "1-on-1 Weekly Coaching Sessions",
-      "Portfolio Development Support",
-      "Job Placement Assistance",
-      "Lifetime Course Updates",
-      "Industry Partner Networking",
-      "Capstone Project Mentorship",
-      "AI Tools & Advanced Resources",
-      "Certificate of Completion"
-    ]
-  },
-  {
-    title: "Full Course",
-    price: {
-      oneTime: 1499,
-    },
-    features: [
-      "All Monthly Plan Features",
-      "25% Savings",
-      "One-time Payment",
-      "Full 4-month Program Access"
-    ]
-  }
-];
-
-export const faq = [
-  {
-    question: "How are the classes conducted?",
-    answer: "Classes are conducted live via Zoom for 1-2 hours every day. We focus on project-based learning where you'll build one project each day while learning new concepts."
-  },
-  {
-    question: "Do I need prior programming experience?",
-    answer: "No prior programming experience is needed. Our courses are designed to take you from complete beginner to professional level through hands-on projects and daily practice."
-  },
-  {
-    question: "What is the class schedule?",
-    answer: "We conduct classes 5 days a week. The exact timing will be discussed and decided based on student availability to ensure maximum participation."
-  },
-  {
-    question: "Can I try before enrolling?",
-    answer: "Yes! We offer one free trial class so you can experience our teaching methodology and decide if it's right for you."
-  },
-  {
-    question: "What software do I need?",
-    answer: "We'll help you set up all required software like VS Code or PyCharm during the course. All software we use is free and industry-standard."
-  },
-  {
-    question: "How do I make payments?",
-    answer: "We accept payments through Stripe and PayPal. You can choose between our monthly plan at $499/month or save 25% by paying the full course fee of $1,499 upfront."
-  }
-];
-
-export const projects = [
-  {
-    title: "Ecommerce Platform",
-    description: "Build a complete online store with payment processing",
-    day: "Week 3-4",
-    image: "" // To be added later
-  },
-  {
-    title: "2D Games",
-    description: "Create classic Snake and Pong games using Python",
-    day: "Week 2",
-    image: "" // To be added later
-  },
-  {
-    title: "Blog Website",
-    description: "Develop a fully-featured blog with admin panel",
-    day: "Week 5",
-    image: "" // To be added later
-  },
-  {
-    title: "Data Entry Automation",
-    description: "Build scripts to automate repetitive data tasks",
-    day: "Week 6",
-    image: "" // To be added later
-  },
-  {
-    title: "Data Visualization with Data Science Libraries",
-    description: "Create interactive dashboards using pandas, matplotlib, and seaborn",
-    day: "Week 7-8",
-    image: "" // To be added later
-  },
-  {
-    title: "Personal Portfolio Website",
-    description: "Design and develop your professional portfolio",
-    day: "Week 1",
-    image: "" // To be added later
-  }
+  { href: "#testimonials", label: "Testimonials" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export const features = [
   {
-    title: "Project-Based Learning",
-    description: "Learn by building real-world projects every single day"
+    title: "Daily Live Coding",
+    description: "Real-time doubt clearing, every session.",
   },
   {
-    title: "Live Interactive Sessions",
-    description: "Daily live classes with hands-on coding and instant doubt clearing"
+    title: "Project-First",
+    description: "Build quick, portfolio-ready mini projects daily.",
   },
   {
-    title: "Industry-Ready Skills",
-    description: "Learn the tools and technologies used by top companies"
+    title: "Mentorship & Support",
+    description: "Immediate feedback and 24/7 community help.",
+  },
+];
+
+export const crashCourseSnapshot = [
+  {
+    day: "Day 1",
+    topic: "Python Basics & Project",
+    details: [
+      "Printing, inputting, string manipulation",
+      "PROJECT: BAND NAME GENERATOR",
+    ],
+    status: "locked",
+    isProject: true,
   },
   {
-    title: "Community Support",
-    description: "Join our active WhatsApp and Discord communities for continuous learning"
+    day: "Day 2",
+    topic: "Data Types & Operations",
+    details: [
+      "Type Error, Checking and Conversion",
+      "Mathematical Operations, Number Manipulation",
+      "PROJECT: Tip Calculator",
+    ],
+    status: "locked",
+    isProject: true,
   },
   {
-    title: "Career Support",
-    description: "Get resume reviews and career guidance from industry experts"
+    day: "Day 3",
+    topic: "Conditional Logic & Project",
+    details: [
+      "If Else, Modulo, Nesting and Elif, Multiple Ifs",
+      "Python Pizza (Challenge), Logical Operators",
+      "PROJECT: Treasure Island",
+    ],
+    status: "locked",
+    isProject: true,
   },
   {
-    title: "Flexible Learning",
-    description: "Schedule classes according to your availability"
-  }
+    day: "Day 4",
+    topic: "Randomness, Lists & Project",
+    details: [
+      "Random Module, Lists, Banker Roulette, IndexError",
+      "PROJECT: Rock Paper Scissors",
+    ],
+    status: "locked",
+    isProject: true,
+  },
+  {
+    day: "Day 5",
+    topic: "Loops & Project",
+    details: [
+      "For Loops, Highest Score, For Loops with Range",
+      "PROJECT: Password Generator",
+    ],
+    status: "locked",
+    isProject: true,
+  },
+  {
+    day: "Day 6",
+    topic: "Functions",
+    details: ["Functions (etask.py, solution.py)"],
+    status: "locked",
+    isProject: false,
+  },
+  {
+    day: "Day 7",
+    topic: "Capstone Project",
+    details: ["PROJECT: Hangman GAME"],
+    status: "locked",
+    isProject: true,
+  },
+];
+
+export const faq = [
+  {
+    question: "How long are classes?",
+    answer: "60–90 minutes live daily. Recordings available.",
+  },
+  {
+    question: "Can I try before committing?",
+    answer: "Yes — this $49 trial is the way to try.",
+  },
+  {
+    question: "What if it’s not for me?",
+    answer: "Full refund within 7 days — no questions.",
+  },
+  {
+    question: "What software do I need?",
+    answer:
+      "A code editor (VS Code/PyCharm) & modern browser. We provide setup guides.",
+  },
+  {
+    question: "Do you help with college assignments?",
+    answer:
+      "Yes — live help & automation techniques to solve assignment tasks.",
+  },
+];
+
+export const projects = [
+  {
+    title: "Automated Mad Libs Generator",
+    description: "A fun game that takes user input to generate a funny story.",
+    image: "/images/projects/blog.png",
+    tags: ["Python", "Strings", "Input/Output"],
+    screenshots: [
+      "/images/projects/blog.png",
+      "/images/projects/blog.png",
+      "/images/projects/blog.png",
+    ],
+  },
+  {
+    title: "Contact Book Application",
+    description: "A command-line application to manage your contacts.",
+    image: "/images/projects/dataentry.jpeg",
+    tags: ["Python", "JSON", "File I/O"],
+    screenshots: [
+      "/images/projects/dataentry.jpeg",
+      "/images/projects/dataentry.jpeg",
+      "/images/projects/dataentry.jpeg",
+    ],
+  },
+  {
+    title: "Simple Role-Playing Game (RPG)",
+    description: "A text-based adventure game with characters, and a story.",
+    image: "/images/projects/movies.png",
+    tags: ["Python", "OOP", "Classes"],
+    screenshots: [
+      "/images/projects/movies.png",
+      "/images/projects/movies.png",
+      "/images/projects/movies.png",
+    ],
+  },
+  {
+    title: "Automated Job Application Bot",
+    description: "A bot that automatically applies for jobs on your behalf.",
+    image: "/images/projects/password.png",
+    tags: ["Python", "Selenium", "Web Scraping"],
+    screenshots: [
+      "/images/projects/password.png",
+      "/images/projects/password.png",
+      "/images/projects/password.png",
+    ],
+  },
+];
+
+export const testimonials = [
+  {
+    quote: "From failing assignments to acing labs — saved my semester.",
+    author: "Aaron",
+    metric: "Built 7 projects",
+    image: "https://randomuser.me/api/portraits/men/42.jpg", // Placeholder
+  },
+  {
+    quote:
+      "The live classes were a game-changer. I finally understood concepts my professor couldn't explain.",
+    author: "Priya S.",
+    metric: "GPA: 2.1 → 3.5",
+    image: "https://randomuser.me/api/portraits/women/45.jpg", // Placeholder
+  },
+  {
+    quote:
+      "I was completely lost. In 7 days, I not only caught up but got ahead of my class.",
+    author: "David K.",
+    metric: "Passed midterm with 92%",
+    image: "https://randomuser.me/api/portraits/men/46.jpg", // Placeholder
+  },
 ];

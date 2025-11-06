@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
     <meta name="theme-color" content="#4F46E5" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,6 +109,37 @@
       }
     </script>
 
+    <!-- Google Analytics 4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <!-- Hotjar Tracking Code -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 1234567, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+
     <!-- Preload critical assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -124,45 +158,35 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    
+
     <!-- Optimize image loading -->
     <script>
       // Lazy load images
-      document.addEventListener('DOMContentLoaded', function() {
-        var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
-        
-        if ('IntersectionObserver' in window) {
-          let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
+      document.addEventListener("DOMContentLoaded", function () {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+        if ("IntersectionObserver" in window) {
+          let lazyImageObserver = new IntersectionObserver(function (
+            entries,
+            observer
+          ) {
+            entries.forEach(function (entry) {
               if (entry.isIntersecting) {
                 let lazyImage = entry.target;
                 lazyImage.src = lazyImage.dataset.src;
                 if (lazyImage.dataset.srcset) {
                   lazyImage.srcset = lazyImage.dataset.srcset;
                 }
-                lazyImage.classList.remove('lazy');
+                lazyImage.classList.remove("lazy");
                 lazyImageObserver.unobserve(lazyImage);
               }
             });
           });
-          
-          lazyImages.forEach(function(lazyImage) {
+
+          lazyImages.forEach(function (lazyImage) {
             lazyImageObserver.observe(lazyImage);
           });
         }
-      });
-      
-      // Defer PayPal initialization
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          if (typeof paypal !== 'undefined') {
-            paypal
-              .HostedButtons({
-                hostedButtonId: "T7GRYXHB9H5NL",
-              })
-              .render("#paypal-container-T7GRYXHB9H5NL");
-          }
-        }, 2000); // Delay PayPal initialization by 2 seconds after page load
       });
     </script>
   </body>

@@ -1,85 +1,52 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        p1: "#2EF2FF",
-        p2: "#3C52D9",
-        p3: "#C8EA80",
-        p4: "#EAEDFF",
-        p5: "#4A5568",
-        s1: "#FFFFFF",
-        s2: "#F7FAFC",
-        s3: "#EDF2F7",
-        s4: "#E2E8F0",
-        s5: "#CBD5E0",
-        black: {
-          DEFAULT: "#000000",
-          100: "#1A202C",
+        brand: {
+          50: "#EBF5FF",
+          100: "#DCEEFF",
+          500: "#2563FF", // primary CTA
+          600: "#1E4FE6",
+        },
+        accent: {
+          500: "#F7B500", // slightly deeper yellow accent
+        },
+        bg: {
+          900: "#050712", // page background
+          800: "#0A1022", // gradient end
+          card: "#0B0E1C",
+        },
+        text: {
+          muted: "#B5B5C3",
+        },
+        neutral: {
+          100: "#F8F9FA", // off-white for text
+          200: "#E9ECEF", // light gray for text
+          300: "#DEE2E6",
+          400: "#CED4DA",
+          500: "#ADB5BD",
+          600: "#6C757D",
+          700: "#495057",
+          800: "#343A40",
+          900: "#212529", // darker gray
         },
       },
-      boxShadow: {
-        100: "0px 4px 4px rgba(0, 0, 0, 0.1), 0px 16px 24px rgba(0, 0, 0, 0.1), inset 0px 3px 6px #1959AD",
-        200: "0px 4px 4px rgba(0, 0, 0, 0.1), 0px 16px 24px rgba(0, 0, 0, 0.1), inset 0px 4px 10px #3391FF",
-        300: "0px 4px 4px rgba(0, 0, 0, 0.1), 0px 16px 24px rgba(0, 0, 0, 0.1), inset 0px 3px 6px #1959AD",
-        400: "inset 0px 2px 4px 0 rgba(255, 255, 255, 0.1)",
-        500: "0px 16px 24px rgba(0, 0, 0, 0.1), 0px -14px 48px rgba(40, 51, 111, 0.3)",
-      },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        sans: ["Inter", ...fontFamily.sans],
         poppins: ["Poppins", "sans-serif"],
       },
-      transitionProperty: {
-        borderColor: "border-color",
-      },
-      spacing: {
-        "1/5": "20%",
+      inset: {
         "2/5": "40%",
         "3/5": "60%",
-        "4/5": "80%",
-        "3/20": "15%",
-        "7/20": "35%",
-        "9/20": "45%",
-        "11/20": "55%",
-        "13/20": "65%",
-        "15/20": "75%",
-        "17/20": "85%",
-        "19/20": "95%",
-        22: "88px",
-        100: "100px",
-        512: "512px",
-        330: "330px",
-        388: "388px",
-        400: "400px",
-        440: "440px",
-        640: "640px",
-        960: "960px",
-        1230: "1230px",
       },
-      zIndex: {
-        1: "1",
-        2: "2",
-        4: "4",
-      },
-      lineHeight: {
-        12: "48px",
-      },
-      borderRadius: {
-        14: "14px",
-        20: "20px",
-        40: "40px",
-        half: "50%",
-        "7xl": "40px",
-      },
-      flex: {
-        50: "0 0 50%",
-        320: "1px 0 320px",
-        300: "0 0 300px",
-        540: "0 0 540px",
-        280: "0 0 280px",
-        256: "0 0 256px",
-        100: "0 0 100%",
+      width: {
+        "3/5": "60%",
+        "7/20": "35%", // Added for .glow-after
+        "13/20": "65%", // Added for .pricing-head_before
       },
     },
   },
