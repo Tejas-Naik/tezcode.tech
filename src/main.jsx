@@ -1,35 +1,33 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import "./index.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import App from "./App.jsx";
 
-// Preload critical resources
-const preloadResources = () => {
-  // Preload hero poster image
-  const heroPoster = new Image();
-  heroPoster.src = "/images/hero-poster.jpg";
+const paypalClientId = import.meta.env.VITE_PAYPAL_CLIENT_ID;
 
-  // Preload fonts
-  if ("fonts" in document) {
-    Promise.all([
-      document.fonts.load("400 1em Inter"),
-      document.fonts.load("600 1em Inter"),
-      document.fonts.load("800 1em Inter"),
-      document.fonts.load("700 1em Poppins"),
-      document.fonts.load("400 1em Poppins"),
-    ]).then(() => {
-      document.documentElement.classList.add("fonts-loaded");
-    });
-  }
+if (!paypalClientId) {
+  console.warn("PayPal Client ID is missing. Please add VITE_PAYPAL_CLIENT_ID to your .env.local file");
+}
+
+const initialOptions = {
+  clientId: paypalClientId || "",
+  currency: "USD",
+  components: "buttons",
+  enableFunding: "paylater,venmo,card",
 };
 
-// Execute preload
-preloadResources();
-
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    {paypalClientId ? (
+      <PayPalScriptProvider options={initialOptions}>
+        <App />
+      </PayPalScriptProvider>
+    ) : (
+      <div style={{ padding: "20px", textAlign: "center" }}>
+        <p>PayPal integration is not configured. Please add VITE_PAYPAL_CLIENT_ID to your .env.local file</p>
+        <App />
+      </div>
+    )}
+  </React.StrictMode>
 );

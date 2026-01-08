@@ -7,15 +7,31 @@
 
 @layer base {
   html {
-    @apply bg-white scroll-smooth;
+    @apply bg-bg-900 scroll-smooth;
   }
 
   body {
-    @apply font-poppins text-[16px] tracking-[-0.03em] text-gray-700;
+    @apply font-poppins text-[16px] tracking-[-0.03em] text-neutral-300 bg-bg-900 overflow-x-hidden selection:bg-neon-blue selection:text-bg-900;
+  }
+
+  .glass {
+    @apply bg-bg-glass backdrop-blur-md border border-white/10 shadow-glass;
+  }
+
+  .glass-card {
+    @apply bg-bg-card/50 backdrop-blur-sm border border-white/5 shadow-glass hover:border-neon-blue/30 transition-all duration-300;
+  }
+
+  .text-gradient-neon {
+    @apply bg-clip-text text-transparent bg-neon-gradient;
+  }
+  
+  .neon-border {
+    @apply border border-neon-blue/50 shadow-neon-blue;
   }
 
   a {
-    @apply no-underline;
+    @apply no-underline transition-colors duration-300 hover:text-neon-blue;
   }
 
   img {

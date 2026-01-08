@@ -13,8 +13,8 @@ const Hero = lazy(() => import("./sections/Hero"));
 const TrustStrip = lazy(() => import("./sections/TrustStrip"));
 const Features = lazy(() => import("./sections/Features")); // Renamed to "Why It Works"
 const HowItWorks = lazy(() => import("./sections/HowItWorks"));
-const CrashCourseSnapshot = lazy(
-  () => import("./sections/CrashCourseSnapshot")
+const CurriculumJourney = lazy(
+  () => import("./sections/CurriculumJourney")
 );
 const Projects = lazy(() => import("./sections/Projects"));
 const Testimonials = lazy(() => import("./sections/Testimonials"));
@@ -26,13 +26,12 @@ const StickyCTA = lazy(() => import("./components/StickyCTA"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 const LandingPage = () => (
-  <main className="relative bg-gradient-to-b from-bg-900 to-bg-800">
+  <main className="relative bg-bg-900 overflow-x-hidden">
     <Header />
     <Hero />
     <TrustStrip />
+    <CurriculumJourney />
     <Features />
-    <HowItWorks />
-    <CrashCourseSnapshot />
     <Projects />
     <Testimonials />
     <Pricing />
@@ -46,7 +45,7 @@ const LandingPage = () => (
 const App = () => {
   return (
     <Router>
-      <Suspense fallback={<div className="bg-black w-full h-screen" />}>
+      <Suspense fallback={<div className="bg-bg-900 w-full h-screen flex items-center justify-center text-neon-blue">Loading...</div>}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/thank-you" element={<ThankYou />} />
