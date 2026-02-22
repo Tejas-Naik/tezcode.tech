@@ -46,7 +46,7 @@ const testimonialsData = [
 ];
 
 const TestimonialCard = ({ data }) => (
-  <div className="w-[350px] mx-4 p-6 glass-card rounded-2xl flex-shrink-0 border border-white/5 hover:border-white/20 transition-colors">
+  <div className="w-[350px] mx-4 p-6 glass-card rounded-2xl flex-shrink-0 border border-white/5 hover:border-white/20 transition-colors h-[260px] flex flex-col justify-between">
     <div className="flex items-center gap-4 mb-4">
         <img src={data.image} alt={data.author} className="w-12 h-12 rounded-full border-2 border-neon-blue/20" />
         <div>
@@ -58,7 +58,7 @@ const TestimonialCard = ({ data }) => (
         </div>
     </div>
     <p className="text-neutral-300 text-sm mb-4 leading-relaxed">"{data.quote}"</p>
-    <div className="pt-4 border-t border-white/5 flex items-center gap-2">
+    <div className="pt-4 mt-auto border-t border-white/5 flex items-center gap-2">
         <span className="text-neon-purple text-lg">★</span>
         <span className="text-sm font-semibold text-white">{data.metric}</span>
     </div>

@@ -39,7 +39,7 @@ const Projects = () => {
               <div className="rounded-lg overflow-hidden mb-4 relative">
                 <div className="absolute inset-0 bg-neon-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
-                  className="w-full h-40 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full aspect-video object-cover transform group-hover:scale-110 transition-transform duration-500"
                   src={project.image || "/projects/flight-deals-thumb.jpg"}
                   alt={project.title}
                 />

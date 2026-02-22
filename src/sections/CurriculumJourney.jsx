@@ -94,8 +94,9 @@ const HangmanVisual = () => (
     <div className="mt-3 text-neon-purple font-bold tracking-[0.5em] text-lg">
       P_TH_N
     </div>
-    <div className="mt-2 text-xs text-green-400">
-      > You Win! The word was PYTHON.
+    <div className="mt-2 text-xs text-green-400 flex items-center">
+      <span>&gt; You Win! The word was PYTHON.</span>
+      <span className="inline-block w-2 h-3.5 bg-green-400 ml-1 mt-0.5 animate-pulse"></span>
     </div>
   </div>
 );

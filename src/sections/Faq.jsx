@@ -64,19 +64,21 @@ const Faq = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-lg text-neutral-400">
-            Still unsure?{" "}
-            <a
-              href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("book_call_click", { source: "faq" })}
-              className="text-neon-purple font-bold hover:text-white transition-colors underline decoration-neon-purple/30 underline-offset-4"
-            >
-              Book a free 15-min call.
-            </a>
+        <div className="text-center mt-12 bg-white/5 rounded-2xl p-8 border border-white/10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-neon-purple/20 blur-[80px] rounded-full pointer-events-none"></div>
+          <h4 className="text-2xl font-bold mb-3 text-white">Still have questions?</h4>
+          <p className="text-lg text-neutral-400 mb-6 max-w-lg mx-auto">
+            Get personalized answers from Tejas directly. Parent and student consultations are always free.
           </p>
+          <a
+            href="https://calendar.app.google/7cqRrikvBjMEsY2s8"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("book_call_click", { source: "faq" })}
+            className="inline-flex items-center px-8 py-4 rounded-full bg-neon-purple text-white font-bold shadow-[0_0_20px_rgba(157,78,221,0.4)] hover:shadow-[0_0_30px_rgba(157,78,221,0.6)] hover:bg-purple-600 transition transform hover:-translate-y-1 relative z-10"
+          >
+            Book a Free 15-Min Call
+          </a>
         </div>
       </div>
     </section>

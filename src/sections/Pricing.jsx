@@ -138,12 +138,17 @@ const Pricing = () => {
                   LIMITED TIME
               </div>
 
-            <h3 className="text-xl font-bold text-white mb-2 tracking-wide uppercase text-neutral-400">
-              7-Day Crash Course
-            </h3>
-            <div className="flex items-center justify-center gap-1 mb-6">
-                 <span className="text-2xl text-neutral-500 line-through">$199</span>
-                <span className="text-6xl font-black text-white tracking-tighter">$49</span>
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-xl font-bold text-white tracking-wide uppercase text-neutral-400">
+                7-Day Crash Course
+              </h3>
+              <span className="bg-gradient-to-r from-neon-blue to-neon-purple text-bg-900 text-[10px] font-black px-2 py-0.5 rounded-sm uppercase tracking-widest shadow-[0_0_10px_rgba(46,242,255,0.4)]">
+                Best Value
+              </span>
+            </div>
+            <div className="flex items-center justify-center gap-2 mb-8 mt-4">
+                 <span className="text-3xl text-neutral-500 line-through decoration-red-500/50 decoration-2">$199</span>
+                <span className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-400 tracking-tighter drop-shadow-lg">$49</span>
             </div>
 
             <ul className="text-left space-y-4 mb-8">

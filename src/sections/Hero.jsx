@@ -161,7 +161,7 @@ const Hero = () => {
             onClick={() => trackEvent("book_call_click", { source: "hero" })} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white transition-all duration-200 border border-white/20 rounded-full hover:bg-white/10 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white w-full sm:w-auto"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white transition-all duration-300 border border-white/20 rounded-full hover:bg-white/10 hover:border-white/40 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white w-full sm:w-auto"
           >
             Book a Free 15-min Call
           </a>
