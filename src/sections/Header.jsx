@@ -42,12 +42,15 @@ const Header = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a
-          href="#hero"
+          href="/#hero"
           className="group relative z-50"
-          onClick={() => {
+          onClick={(e) => {
             setActiveSection("hero");
             setMobileMenuOpen(false);
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            // If already on homepage, manually scroll
+            if(window.location.pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
         >
           <div className="flex items-center gap-2">
@@ -65,7 +68,7 @@ const Header = () => {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={link.href.startsWith('#') ? `/${link.href}` : link.href}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeSection === link.href.substring(1)
                   ? "bg-neon-blue text-bg-900 shadow-[0_0_15px_rgba(46,242,255,0.4)] font-bold"
@@ -114,7 +117,7 @@ const Header = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={link.href.startsWith('#') ? `/${link.href}` : link.href}
                   onClick={() => {
                     setMobileMenuOpen(false);
                     setActiveSection(link.href.substring(1));
