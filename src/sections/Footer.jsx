@@ -1,4 +1,5 @@
 import { FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { trackEvent } from "../../utils/analytics";
 
 const Footer = () => {
@@ -47,6 +48,10 @@ const Footer = () => {
             </p>
             <p className="text-xs mt-3 text-neutral-600">
               © {new Date().getFullYear()} TezCode.Tech — All rights reserved.
+              <Link to="/blog" className="ml-2 hover:text-white transition-colors">
+                Blog
+              </Link>{" "}
+              ·
               <a href="#" className="ml-2 hover:text-white transition-colors">
                 Privacy
               </a>{" "}

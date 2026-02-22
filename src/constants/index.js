@@ -3,6 +3,7 @@ export const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#faq", label: "FAQ" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export const features = [

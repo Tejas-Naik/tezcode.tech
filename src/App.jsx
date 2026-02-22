@@ -25,6 +25,11 @@ const Footer = lazy(() => import("./sections/Footer"));
 const StickyCTA = lazy(() => import("./components/StickyCTA"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
+// Blog Components
+const BlogLayout = lazy(() => import("./pages/BlogLayout"));
+const BlogList = lazy(() => import("./pages/BlogList"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+
 const LandingPage = () => (
   <main className="relative bg-bg-900 overflow-x-hidden">
     <Header />
@@ -49,6 +54,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          
+          {/* Blog Routes */}
+          <Route path="/blog" element={<BlogLayout />}>
+            <Route index element={<BlogList />} />
+            <Route path=":slug" element={<BlogPost />} />
+          </Route>
         </Routes>
       </Suspense>
     </Router>
