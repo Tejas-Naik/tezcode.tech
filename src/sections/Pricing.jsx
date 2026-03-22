@@ -190,9 +190,14 @@ const Pricing = () => {
               {message && <Message content={message} />}
             </div>
 
-            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-neutral-400">
-                <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                <p>7-Day Money-Back Guarantee</p>
+            <div className="mt-5 p-4 rounded-2xl bg-green-500/5 border border-green-500/20 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <span className="text-green-400 text-lg">🛡️</span>
+                <p className="text-green-400 font-bold text-sm">7-Day Satisfaction Guarantee</p>
+              </div>
+              <p className="text-neutral-500 text-xs leading-relaxed">
+                If you don't find value in the course, you can request a full refund. No questions asked.
+              </p>
             </div>
           </div>
         </div>

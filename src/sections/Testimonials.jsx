@@ -3,88 +3,32 @@ import { useState, useRef } from "react";
 
 const testimonialsData = [
   {
-    name: "Yusuf",
-    country: "Saudi Arabia",
-    flag: "🇸🇦",
-    review:
-      "The classes are really engaging and fun. I actually started understanding concepts better than my school classes, and I feel more confident while coding now. The way everything is explained makes learning Python easy and enjoyable.",
-  },
-  {
-    name: "Diana",
+    name: "Student",
     country: "UAE",
     flag: "🇦🇪",
     review:
-      "Very well structured and organized classes. Concepts are explained clearly and in a way that's easy to understand. The sessions are also enjoyable, which makes it easier to stay consistent while learning.",
+      "Before this course, I had zero coding experience. Within a few days, I was able to write my own Python programs confidently.",
   },
   {
-    name: "Ashay Chintawar",
-    country: "United Kingdom",
+    name: "Student",
+    country: "Saudi Arabia",
+    flag: "🇸🇦",
+    review:
+      "The classes are interactive and easy to understand. I was ahead of my classmates in school after learning here.",
+  },
+  {
+    name: "Student",
+    country: "UK",
     flag: "🇬🇧",
     review:
-      "I have learned a lot through these sessions. The teaching style is simple, practical, and very effective. Complex topics are broken down into easy steps, which helped me gain confidence in programming.",
+      "Complex concepts are explained in a very simple way. This course made programming finally make sense to me.",
   },
   {
-    name: "Yousuf Ahmad",
-    country: "Egypt",
-    flag: "🇪🇬",
-    review:
-      "The classes are very interactive and engaging. I enjoy learning a lot, and the explanations are clear and easy to follow. It made coding feel much less intimidating.",
-  },
-  {
-    name: "Leen Mohannad",
-    country: "UAE",
-    flag: "🇦🇪",
-    review:
-      "The sessions are enjoyable and very easy to understand. The teaching approach is practical, and the experience makes learning coding much smoother for beginners.",
-  },
-  {
-    name: "Ali Ijlal Amin",
-    country: "Saudi Arabia",
-    flag: "🇸🇦",
-    review:
-      "Great teaching style. Every doubt is answered clearly, and concepts are explained in detail. It helped me improve a lot in coding and understand how things actually work.",
-  },
-  {
-    name: "Aaron",
+    name: "Student",
     country: "Netherlands",
     flag: "🇳🇱",
     review:
-      "Very interactive and engaging sessions. The lessons are actually useful and practical, not just theory. I was able to apply what I learned immediately.",
-  },
-  {
-    name: "Afsa Amity",
-    country: "Bangladesh",
-    flag: "🇧🇩",
-    review:
-      "The teaching is clear and easy to follow. The classes are also fun, which makes learning enjoyable and less stressful. It helped me stay consistent.",
-  },
-  {
-    name: "Khalid Alrefai",
-    country: "Saudi Arabia",
-    flag: "🇸🇦",
-    review:
-      "Clear explanations and enjoyable sessions. The teaching style makes it easy to understand even difficult topics.",
-  },
-  {
-    name: "Sameera Fathima",
-    country: "Saudi Arabia",
-    flag: "🇸🇦",
-    review:
-      "One of the best learning experiences I've had. The sessions are engaging, and the way concepts are explained makes everything simple and easy to grasp.",
-  },
-  {
-    name: "Anonymous Student",
-    country: "UAE",
-    flag: "🇦🇪",
-    review:
-      "Very friendly and supportive teaching style. Concepts are explained clearly, and the classes are always engaging and enjoyable.",
-  },
-  {
-    name: "Faisal Alhomsi",
-    country: "Saudi Arabia",
-    flag: "🇸🇦",
-    review:
-      "The classes are very interactive and fun. I stayed engaged throughout and was able to understand concepts much faster than before.",
+      "Very practical and engaging lessons. I was able to apply what I learned immediately.",
   },
 ];
 
@@ -106,7 +50,7 @@ const TestimonialCard = ({ data }) => (
     </p>
     <div className="flex items-center gap-3 pt-4 border-t border-white/5">
       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neon-blue/30 to-neon-purple/30 border border-white/10 flex items-center justify-center text-lg font-bold text-white shrink-0">
-        {data.name[0]}
+        {data.flag}
       </div>
       <div>
         <p className="font-semibold text-white text-sm leading-none mb-1">

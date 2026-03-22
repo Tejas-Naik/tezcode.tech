@@ -3,24 +3,29 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 const outcomes = [
   {
-    title: "Write Real Python Programs",
+    title: "Write Real Python Programs from Scratch",
     description:
-      "Build working programs from scratch — not just copy-paste snippets.",
+      "Build working programs from day one — not just copy-paste snippets.",
   },
   {
-    title: "Understand Logic and Loops",
+    title: "Understand Loops, Logic, and Functions",
     description:
       "Master control flow, conditionals, and repetition — the core of all programming.",
   },
   {
-    title: "Build Mini Projects",
+    title: "Build Mini Automation Scripts",
     description:
-      "Ship 7 actual projects across 7 days. From calculators to mini-games.",
+      "Write scripts that solve real problems. Automate tasks and work with real data.",
   },
   {
     title: "Think Like a Developer",
     description:
       "Learn to break down problems, debug your own code, and approach challenges systematically.",
+  },
+  {
+    title: "Gain Confidence in Coding",
+    description:
+      "Walk away with the self-belief to keep learning and building on your own — indefinitely.",
   },
 ];
 

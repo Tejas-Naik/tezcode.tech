@@ -150,10 +150,10 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             href="#pricing" 
             onClick={() => trackEvent("hero_cta_click")} 
-            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-bg-900 transition-all duration-200 bg-neon-blue rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-blue w-full sm:w-auto overflow-hidden"
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-bg-900 transition-all duration-200 bg-neon-blue rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-blue w-full sm:w-auto overflow-hidden shadow-neon-blue"
           >
             <span className="absolute inset-0 w-full h-full -mt-10 transition-all duration-700 ease-out transform translate-x-0 -rotate-180 bg-white opacity-0 group-hover:opacity-30 group-start:translate-x-0"></span>
-            Start 7-Day Course ($49)
+            Join the 7-Day Python Course — $49
             <svg className="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
           </motion.a>
 
@@ -166,9 +166,26 @@ const Hero = () => {
           </a>
         </div>
         
-        <p className="mt-6 text-neutral-500 text-sm font-medium">
-          <span className="text-neon-purple">●</span> Join 100+ students · <span className="text-neon-purple">●</span> 7-Day Money Back Guarantee
-        </p>
+        {/* Mini Pricing Badge */}
+        <div className="mt-8 flex items-center justify-center gap-0 flex-wrap">
+          <div className="inline-flex items-center divide-x divide-white/10 glass rounded-2xl border border-white/10 overflow-hidden shadow-lg">
+            <div className="px-5 py-3 text-center">
+              <p className="text-xs text-neutral-500 uppercase tracking-widest mb-0.5">Format</p>
+              <p className="text-sm font-bold text-white">7-Day Live Course</p>
+            </div>
+            <div className="px-5 py-3 text-center">
+              <p className="text-xs text-neutral-500 uppercase tracking-widest mb-0.5">Price</p>
+              <p className="text-sm font-black text-neon-blue">Only $49</p>
+            </div>
+            <div className="px-5 py-3 text-center">
+              <p className="text-xs text-neutral-500 uppercase tracking-widest mb-0.5">Availability</p>
+              <p className="text-sm font-bold text-neon-purple flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-neon-purple animate-pulse inline-block"></span>
+                Limited Seats
+              </p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </header>
