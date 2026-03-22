@@ -104,9 +104,9 @@ const Hero = () => {
             transition={{ delay: 0.1, duration: 0.6 }} 
             className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tight text-white mb-6"
         >
-          Master Python <br />
+          Learn Python in 7 Days —{" "}<br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-white to-neon-purple text-glow">
-            In Just 7 Days
+            Even If You've Never Coded Before
           </span>
         </motion.h1>
 
@@ -116,8 +116,9 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Stop watching endless tutorials. Build <span className="text-white font-semibold">Real Apps</span>, solve <span className="text-white font-semibold">Real Problems</span>, and get <span className="text-white font-semibold">Real Feedback</span>. 
-          <br className="hidden md:block"/> Join the only crash course with a 94% completion rate.
+          A live, structured Python crash course by{" "}
+          <span className="text-white font-semibold">Tejas Naik</span> designed to help beginners build{" "}
+          <span className="text-white font-semibold">real coding skills</span> from Day 1.
         </motion.p>
 
         {/* Video Container - Glass Card */}
@@ -152,23 +153,21 @@ const Hero = () => {
             className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-bg-900 transition-all duration-200 bg-neon-blue rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-blue w-full sm:w-auto overflow-hidden"
           >
             <span className="absolute inset-0 w-full h-full -mt-10 transition-all duration-700 ease-out transform translate-x-0 -rotate-180 bg-white opacity-0 group-hover:opacity-30 group-start:translate-x-0"></span>
-            Start Now — $49
+            Start 7-Day Course ($49)
             <svg className="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
           </motion.a>
 
           <a 
-            href="https://calendar.app.google/7cqRrikvBjMEsY2s8" 
-            onClick={() => trackEvent("book_call_click", { source: "hero" })} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+            href="#learn"
+            onClick={() => trackEvent("hero_secondary_cta_click", { source: "hero" })} 
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white transition-all duration-300 border border-white/20 rounded-full hover:bg-white/10 hover:border-white/40 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white w-full sm:w-auto"
           >
-            Book a Free 15-min Call
+            See What You'll Learn
           </a>
         </div>
         
         <p className="mt-6 text-neutral-500 text-sm font-medium">
-          <span className="text-neon-purple">●</span> Join 500+ students · <span className="text-neon-purple">●</span> 7-Day Money Back Guarantee
+          <span className="text-neon-purple">●</span> Join 100+ students · <span className="text-neon-purple">●</span> 7-Day Money Back Guarantee
         </p>
 
       </div>

@@ -42,10 +42,14 @@ const Instructor = () => {
               </motion.h3>
               <motion.div className="space-y-6 text-lg text-neutral-300">
                 <p>
-                  I'm not an academic. I'm a <span className="text-white font-bold">Full-Stack Developer</span> who knows what the industry actually wants.
+                  I'm a <span className="text-white font-bold">Full-Stack Developer</span> with 5+ years of real-world
+                  experience building production applications.
                 </p>
                 <p>
-                  Most professors have never shipped production code. I've built real products and trained <span className="text-neon-purple font-bold">500+ students</span> to do the same. My goal is to get you hired, not just pass a test.
+                  I've taught <span className="text-neon-purple font-bold">100+ students</span> from UAE, Saudi Arabia,
+                  UK, Netherlands, Bangladesh and more. My focus is always on{" "}
+                  <span className="text-white font-semibold">practical learning</span> — real code,
+                  real projects, no fluff.
                 </p>
               </motion.div>
               
@@ -55,8 +59,12 @@ const Instructor = () => {
                     <span className="text-xs text-neutral-500 uppercase">Years XP</span>
                  </div>
                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                    <span className="block text-2xl font-bold text-white">500+</span>
-                    <span className="text-xs text-neutral-500 uppercase">Graduates</span>
+                    <span className="block text-2xl font-bold text-white">100+</span>
+                    <span className="text-xs text-neutral-500 uppercase">Students</span>
+                 </div>
+                 <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">
+                    <span className="block text-2xl font-bold text-white">🌍</span>
+                    <span className="text-xs text-neutral-500 uppercase">Global Reach</span>
                  </div>
               </div>
 

@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
 import "./styles/animations.css";
 
@@ -11,16 +10,16 @@ import "./styles/animations.css";
 const Header = lazy(() => import("./sections/Header"));
 const Hero = lazy(() => import("./sections/Hero"));
 const TrustStrip = lazy(() => import("./sections/TrustStrip"));
-const Features = lazy(() => import("./sections/Features")); // Renamed to "Why It Works"
-const HowItWorks = lazy(() => import("./sections/HowItWorks"));
-const CurriculumJourney = lazy(
-  () => import("./sections/CurriculumJourney")
-);
-const Projects = lazy(() => import("./sections/Projects"));
-const Testimonials = lazy(() => import("./sections/Testimonials"));
-const Pricing = lazy(() => import("./sections/Pricing"));
+const Problem = lazy(() => import("./sections/Problem"));
+const Features = lazy(() => import("./sections/Features")); // Solution section
+const WhatYoullLearn = lazy(() => import("./sections/WhatYoullLearn"));
+const CurriculumJourney = lazy(() => import("./sections/CurriculumJourney")); // 7-Day Roadmap
 const Instructor = lazy(() => import("./sections/Instructor"));
-const Faq = lazy(() => import("./sections/Faq"));
+const Testimonials = lazy(() => import("./sections/Testimonials"));
+const HowItWorks = lazy(() => import("./sections/HowItWorks"));
+const Pricing = lazy(() => import("./sections/Pricing"));
+const FutureHook = lazy(() => import("./sections/FutureHook"));
+const EmailCapture = lazy(() => import("./sections/EmailCapture"));
 const Footer = lazy(() => import("./sections/Footer"));
 const StickyCTA = lazy(() => import("./components/StickyCTA"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
@@ -30,18 +29,25 @@ const BlogLayout = lazy(() => import("./pages/BlogLayout"));
 const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 
+// Section order follows the spec exactly:
+// Hero → TrustStrip → Problem → Solution → WhatYoullLearn →
+// Roadmap → Instructor → Testimonials → HowItWorks →
+// Pricing → FutureHook → EmailCapture → Footer
 const LandingPage = () => (
   <main className="relative bg-bg-900 overflow-x-hidden">
     <Header />
     <Hero />
     <TrustStrip />
-    <CurriculumJourney />
+    <Problem />
     <Features />
-    <Projects />
-    <Testimonials />
-    <Pricing />
+    <WhatYoullLearn />
+    <CurriculumJourney />
     <Instructor />
-    <Faq />
+    <Testimonials />
+    <HowItWorks />
+    <Pricing />
+    <FutureHook />
+    <EmailCapture />
     <Footer />
     <StickyCTA />
   </main>
@@ -54,7 +60,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/thank-you" element={<ThankYou />} />
-          
+
           {/* Blog Routes */}
           <Route path="/blog" element={<BlogLayout />}>
             <Route index element={<BlogList />} />

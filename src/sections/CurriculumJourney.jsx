@@ -1,155 +1,136 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 
-const DayCard = ({ day, title, children, isLeft }) => (
-  <motion.div 
-    initial={{ opacity: 0, x: 0, y: 50 }}
-    whileInView={{ opacity: 1, x: 0, y: 0 }}
-    viewport={{ margin: "-50px" }}
-    transition={{ duration: 0.5 }}
-    className={`relative flex justify-between items-center w-full mb-12 md:mb-8 ${isLeft ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+const days = [
+  {
+    day: "1",
+    title: "Python Basics",
+    description:
+      "Start from scratch. Variables, data types, strings, and user input. You'll write your first real program on day one.",
+    icon: "🐍",
+  },
+  {
+    day: "2",
+    title: "Variables & Logic",
+    description:
+      "Learn to store and manipulate data. Master conditional logic (if/else) and mathematical operators.",
+    icon: "🧠",
+  },
+  {
+    day: "3",
+    title: "Loops",
+    description:
+      "Automate repetitive tasks with for and while loops. Build a text-based game using everything you've learned so far.",
+    icon: "🔄",
+  },
+  {
+    day: "4",
+    title: "Functions",
+    description:
+      "Write reusable, clean code with functions. Understand how to structure your programs like a professional developer.",
+    icon: "⚙️",
+  },
+  {
+    day: "5",
+    title: "Mini Project",
+    description:
+      "Apply Days 1-4 in a complete mini-project. Build something meaningful and add it to your portfolio.",
+    icon: "🛠️",
+  },
+  {
+    day: "6",
+    title: "Real-World Script",
+    description:
+      "Write a script that solves a real problem — automation, file handling, or working with data.",
+    icon: "🌍",
+  },
+  {
+    day: "7",
+    title: "Final Challenge",
+    description:
+      "Combine all skills in the capstone: a fully functional Hangman game built from scratch. Graduate with confidence.",
+    icon: "🏆",
+  },
+];
+
+const DayCard = ({ day, title, description, icon, isLeft, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.5, delay: index * 0.05 }}
+    className={`relative flex items-center w-full mb-8 ${
+      isLeft ? "md:flex-row-reverse" : "md:flex-row"
+    }`}
   >
+    {/* Spacer for desktop alternating layout */}
     <div className="hidden md:block w-5/12"></div>
-    
-    <div className="z-20 flex items-center bg-neon-blue shadow-[0_0_10px_rgba(46,242,255,0.6)] w-10 h-10 rounded-full shrink-0 md:order-1 absolute left-0 md:left-1/2 md:-ml-5">
-      <h1 className="mx-auto font-black text-lg text-bg-900">{day}</h1>
+
+    {/* Timeline Circle */}
+    <div className="z-20 flex items-center justify-center bg-neon-blue shadow-neon-blue w-10 h-10 rounded-full shrink-0 absolute left-0 md:left-1/2 md:-ml-5">
+      <span className="font-black text-lg text-bg-900 leading-none">{day}</span>
     </div>
-    
-    <div className={`glass-card flex-1 md:flex-none md:w-5/12 px-6 py-6 rounded-xl border border-white/10 hover:border-neon-blue/30 transition-all duration-300 ml-16 md:ml-0`}>
-      <h3 className="mb-2 font-bold text-white text-xl flex flex-wrap items-center gap-2 leading-tight">
-        <span className="text-neon-purple whitespace-nowrap">Day {day}:</span> 
-        <span className="text-white">{title}</span>
-      </h3>
-      <div className="text-neutral-300 text-sm leading-relaxed">
-        {children}
+
+    {/* Card */}
+    <div className="glass-card flex-1 md:w-5/12 md:flex-none px-6 py-6 rounded-2xl border border-white/10 hover:border-neon-blue/30 transition-all duration-300 ml-14 md:ml-0">
+      <div className="flex items-center gap-3 mb-2">
+        <span className="text-2xl">{icon}</span>
+        <h3 className="font-bold text-white text-lg">
+          <span className="text-neon-purple">Day {day}: </span>
+          {title}
+        </h3>
       </div>
+      <p className="text-neutral-400 text-sm leading-relaxed">{description}</p>
     </div>
   </motion.div>
 );
 
-const BandNameGenerator = () => {
-  const [city, setCity] = useState("");
-  const [pet, setPet] = useState("");
-  const [bandName, setBandName] = useState("");
-
-  const generate = () => {
-    if (city && pet) {
-      setBandName(`${city} ${pet}`);
-    }
-  };
-
-  return (
-    <div className="mt-4 p-4 bg-bg-900/50 rounded-lg border border-white/10">
-      <div className="space-y-3">
-        <input 
-          type="text" 
-          placeholder="New York" 
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          className="w-full bg-bg-card border border-neutral-700 rounded px-3 py-2 text-white focus:border-neon-blue focus:outline-none transition-colors text-sm"
-        />
-        <input 
-          type="text" 
-          placeholder="Rabbit" 
-          value={pet}
-          onChange={(e) => setPet(e.target.value)}
-          className="w-full bg-bg-card border border-neutral-700 rounded px-3 py-2 text-white focus:border-neon-blue focus:outline-none transition-colors text-sm"
-        />
-        <button 
-          onClick={generate}
-          className="w-full bg-neon-blue text-bg-900 font-bold py-2 rounded hover:bg-neon-blue/90 transition-colors text-sm"
-        >
-          Generate Band Name
-        </button>
-      </div>
-      {bandName && (
-        <motion.div 
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="mt-4 text-center"
-        >
-          <p className="text-xs text-neutral-400 uppercase tracking-widest">Your Band Name</p>
-          <p className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple animate-pulse">
-            {bandName}
-          </p>
-        </motion.div>
-      )}
-    </div>
-  );
-};
-
-const HangmanVisual = () => (
-   <div className="mt-4 p-4 bg-bg-900/50 rounded-lg border border-white/10 font-mono text-center">
-    <div className="text-neon-blue mb-2 text-xs opacity-70">Console Output</div>
-    <div className="text-white whitespace-pre font-bold">
-{`  +---+
-  |   |
-  O   |
- /|\\  |
- / \\  |
-      |
-=========
-`}
-    </div>
-    <div className="mt-3 text-neon-purple font-bold tracking-[0.5em] text-lg">
-      P_TH_N
-    </div>
-    <div className="mt-2 text-xs text-green-400 flex items-center">
-      <span>&gt; You Win! The word was PYTHON.</span>
-      <span className="inline-block w-2 h-3.5 bg-green-400 ml-1 mt-0.5 animate-pulse"></span>
-    </div>
-  </div>
-);
-
 const CurriculumJourney = () => {
   return (
-    <section className="relative py-20 bg-bg-900 overflow-hidden" id="curriculum">
-      <div className="container mx-auto px-4 relative">
+    <section className="relative py-24 bg-bg-900 overflow-hidden" id="roadmap">
+      {/* Glow */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[300px] h-[600px] bg-neon-blue/5 blur-[80px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-                Zero to Hero <span className="text-transparent bg-clip-text bg-neon-gradient">Timeline</span>
-            </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
-                No fluff. Just the raw skills you need to become a developer.
-            </p>
+          <span className="text-neon-blue font-mono text-sm tracking-widest mb-4 block uppercase">
+            // THE ROADMAP
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+            Your{" "}
+            <span className="text-transparent bg-clip-text bg-neon-gradient">
+              7-Day Plan
+            </span>
+          </h2>
+          <p className="text-neutral-400 max-w-2xl mx-auto">
+            One day at a time. Each session builds on the last — no confusion, no
+            jumps, no fluff.
+          </p>
         </div>
 
-        <div className="relative wrap overflow-hidden p-0 h-full">
-          {/* Vertical Line - Left on mobile, Center on desktop */}
-          <div className="absolute border-opacity-20 border-white h-full border left-5 md:left-1/2 top-0" style={{ borderWidth: '1px' }}></div>
+        <div className="relative max-w-4xl mx-auto">
+          {/* Vertical Line */}
+          <div
+            className="absolute border-white/10 h-full border left-5 md:left-1/2 top-0"
+            style={{ borderWidth: "1px" }}
+          ></div>
 
-          {/* Cards */}
-          <DayCard day="1" title="The Basics & Band Name Generator" isLeft={true}>
-            <p className="mb-3">Master variables, strings, and inputs. We don't just print "Hello World" — we build a real user-input app instantly.</p>
-            <div className="text-xs font-mono text-neon-blue mb-2">&gt; TRY THE PROJECT:</div>
-            <BandNameGenerator />
-          </DayCard>
+          {days.map((d, i) => (
+            <DayCard
+              key={d.day}
+              {...d}
+              index={i}
+              isLeft={i % 2 === 0}
+            />
+          ))}
+        </div>
 
-          <DayCard day="2" title="Data Types & Mathematical Operations" isLeft={false}>
-            <p>Learn to manipulate numbers, type check, and handle errors. Build a <strong>Tip Calculator</strong> to handle real-world math.</p>
-          </DayCard>
-
-          <DayCard day="3" title="Control Flow & Logical Operators" isLeft={true}>
-            <p>Master <code>if/else</code> statements and modulo operators. Build a text-based <strong>Treasure Island</strong> adventure game.</p>
-          </DayCard>
-
-          <DayCard day="4" title="Randomisation & Python Lists" isLeft={false}>
-            <p>Learn how computers generate randomness and manage data lists. create a <strong>Rock Paper Scissors</strong> game against the AI.</p>
-          </DayCard>
-
-          <DayCard day="5" title="Loops & Password Generator" isLeft={true}>
-            <p>Automate repetitive tasks with loops. Build a secure <strong>Password Generator</strong> that beats built-in tools.</p>
-          </DayCard>
-
-            <DayCard day="6" title="Functions & Karel" isLeft={false}>
-            <p>Learn to structure code with custom functions. Navigate the "Reeborg's World" maze using algorithmic thinking.</p>
-          </DayCard>
-
-          <DayCard day="7" title="Capstone: The Hangman Game" isLeft={true}>
-            <p>Combine EVERYTHING (loops, lists, if/else, inputs) to build a fully functional, playable Hangman game from scratch.</p>
-            <HangmanVisual />
-          </DayCard>
-
+        <div className="text-center mt-12">
+          <a
+            href="#pricing"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-neon-blue text-bg-900 font-bold rounded-full hover:bg-white transition-all hover:scale-105 shadow-neon-blue"
+          >
+            Start Day 1 Today — $49
+          </a>
         </div>
       </div>
     </section>

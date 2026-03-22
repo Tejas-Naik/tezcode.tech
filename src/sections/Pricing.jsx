@@ -8,9 +8,9 @@ const Pricing = () => {
   const navigate = useNavigate();
   const features = [
     "Daily live classes for 7 days",
-    "Access to recordings & project assets",
-    "7 mini projects + capstone demo",
-    "24/7 Discord & WhatsApp support",
+    "Notes + resources + project assets",
+    "7 mini projects — beginner friendly",
+    "WhatsApp & Discord support group",
   ];
 
   const [message, setMessage] = useState("");
@@ -122,12 +122,23 @@ const Pricing = () => {
        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neon-purple/20 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h3 className="text-4xl md:text-5xl font-black mb-4">
-          Ready to <span className="text-transparent bg-clip-text bg-neon-gradient">Fix Your Grades?</span>
-        </h3>
-        <p className="text-lg text-neutral-400 max-w-2xl mx-auto mb-12">
-            One price. Lifetime access. No subscriptions.
+        <span className="text-neon-blue font-mono text-sm tracking-widest mb-4 block uppercase">
+          // PRICING
+        </span>
+        <h2 className="text-4xl md:text-5xl font-black mb-4">
+          Start Your{" "}
+          <span className="text-transparent bg-clip-text bg-neon-gradient">
+            Coding Journey
+          </span>
+        </h2>
+        <p className="text-lg text-neutral-400 max-w-2xl mx-auto mb-4">
+          One payment. Live classes. Real projects. Real growth.
         </p>
+        {/* Urgency */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-purple/10 border border-neon-purple/30 text-neon-purple text-sm font-semibold mb-12">
+          <span className="w-2 h-2 rounded-full bg-neon-purple animate-pulse"></span>
+          Limited seats for each batch · Next batch starting soon
+        </div>
 
         <div className="max-w-md mx-auto relative group">
            {/* Pulsing Gradient Border */}

@@ -12,14 +12,15 @@ const Footer = () => {
         {/* Final CTA */}
         <div className="text-center py-8 md:py-12 mb-8 md:mb-12 border-b border-white/5">
           <h2 className="text-2xl md:text-4xl font-black text-white mb-4 md:mb-6">
-            Ready to stop failing and <span className="text-transparent bg-clip-text bg-neon-gradient">start building?</span>
+            Start Your Python Journey{" "}
+            <span className="text-transparent bg-clip-text bg-neon-gradient">Today</span>
           </h2>
           <a
             href="#pricing"
             onClick={() => trackEvent("hero_cta_click", { source: "footer" })}
             className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 rounded-full bg-white text-bg-900 font-bold shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition transform hover:scale-105 text-sm md:text-base"
           >
-            Start 7-Day Crash Course — $49
+            Join the 7-Day Course
           </a>
           <p className="text-xs md:text-sm text-neutral-500 mt-4 md:mt-6 flex items-center justify-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
