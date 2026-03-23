@@ -6,33 +6,102 @@
 @import "./styles/animations.css";
 
 @layer base {
+  /* === GLOBAL BACKGROUND === */
   html {
-    @apply bg-bg-900 scroll-smooth;
+    scroll-behavior: smooth;
+    /* Page background: spec radial gradients + #050816 */
+    background-color: #050816;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(0, 245, 255, 0.08), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(140, 0, 255, 0.08), transparent 40%);
+    background-attachment: fixed;
+  }
+
+  /* Subtle noise texture overlay */
+  html::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.5;
   }
 
   body {
-    @apply font-poppins text-[16px] tracking-[-0.03em] text-neutral-300 bg-bg-900 overflow-x-hidden selection:bg-neon-blue selection:text-bg-900;
+    @apply font-poppins text-[16px] tracking-[-0.03em] text-neutral-300 overflow-x-hidden selection:bg-neon-blue selection:text-bg-900;
+    background: transparent;
+    position: relative;
+    z-index: 1;
   }
 
+  /* === GLASSMORPHISM === */
+  /* Spec: background rgba(255,255,255,0.03), backdrop-filter blur(10px), border rgba(255,255,255,0.08) */
   .glass {
-    @apply bg-bg-glass backdrop-blur-md border border-white/10 shadow-glass;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .glass-card {
-    @apply bg-bg-card/50 backdrop-blur-sm border border-white/5 shadow-glass hover:border-neon-blue/30 transition-all duration-300;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Card soft glow on hover — spec requirement */
+  .glass-card:hover {
+    border-color: rgba(0, 245, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.07), 0 20px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
   }
 
   .text-gradient-neon {
     @apply bg-clip-text text-transparent bg-neon-gradient;
   }
-  
+
+  /* === NEON BORDERS === */
   .neon-border {
-    @apply border border-neon-blue/50 shadow-neon-blue;
+    border: 1px solid rgba(0, 245, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.25), inset 0 0 20px rgba(0, 245, 255, 0.03);
+  }
+
+  /* === GLOWING CTA BUTTON — always-on glow per spec === */
+  .btn-glow {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 245, 255, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  .btn-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.75), 0 0 60px rgba(0, 245, 255, 0.35);
+    transform: scale(1.04);
+  }
+
+  /* === SECTION SEPARATOR — gradient glow line === */
+  .section-sep {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 245, 255, 0.25), rgba(140, 0, 255, 0.25), transparent);
+    border: none;
+    margin: 0;
+    opacity: 0.7;
+  }
+
+  /* === TEXT GLOW — important heading words === */
+  .text-glow {
+    text-shadow: 0 0 30px rgba(0, 245, 255, 0.5), 0 0 60px rgba(0, 245, 255, 0.2);
   }
 
   a {
-    @apply no-underline transition-colors duration-300 hover:text-neon-blue;
+    @apply no-underline transition-colors duration-300;
   }
+  a:hover { color: #00f5ff; }
 
   img {
     @apply block max-w-full h-auto;
@@ -46,37 +115,16 @@
     @apply tracking-[-0.03em];
   }
 
-  /* Improve tap target sizes on mobile */
   @media (max-width: 640px) {
-    button,
-    a,
-    input,
-    select,
-    textarea {
+    button, a, input, select, textarea {
       @apply min-h-[44px] min-w-[44px];
     }
-
-    /* Improve readability on mobile */
-    p,
-    li {
+    p, li {
       @apply text-base leading-relaxed;
     }
-
-    /* Reduce font sizes for headings on mobile */
-    h1,
-    .h1 {
-      @apply text-4xl leading-tight;
-    }
-
-    h2,
-    .h2 {
-      @apply text-3xl leading-tight;
-    }
-
-    h3,
-    .h3 {
-      @apply text-2xl leading-tight;
-    }
+    h1, .h1 { @apply text-4xl leading-tight; }
+    h2, .h2 { @apply text-3xl leading-tight; }
+    h3, .h3 { @apply text-2xl leading-tight; }
   }
 }
 

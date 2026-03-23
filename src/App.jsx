@@ -29,24 +29,34 @@ const BlogLayout = lazy(() => import("./pages/BlogLayout"));
 const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 
-// Section order follows the spec exactly:
-// Hero → TrustStrip → Problem → Solution → WhatYoullLearn →
-// Roadmap → Instructor → Testimonials → HowItWorks →
-// Pricing → FutureHook → EmailCapture → Footer
+// Inline separator component — glow gradient line between sections
+const Sep = () => <hr className="section-sep" />;
+
 const LandingPage = () => (
-  <main className="relative bg-bg-900 overflow-x-hidden">
+  <main className="relative overflow-x-hidden">
     <Header />
     <Hero />
+    <Sep />
     <TrustStrip />
+    <Sep />
     <Problem />
+    <Sep />
     <Features />
+    <Sep />
     <WhatYoullLearn />
+    <Sep />
     <CurriculumJourney />
+    <Sep />
     <Instructor />
+    <Sep />
     <Testimonials />
+    <Sep />
     <HowItWorks />
+    <Sep />
     <Pricing />
+    <Sep />
     <FutureHook />
+    <Sep />
     <EmailCapture />
     <Footer />
     <StickyCTA />
