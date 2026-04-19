@@ -132,10 +132,7 @@ const MobileCarousel = () => {
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-24 bg-bg-900 overflow-hidden relative">
-      {/* Background */}
-      <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-bg-900 to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-bg-900 to-transparent z-10 pointer-events-none"></div>
+    <section id="testimonials" className="py-24 overflow-hidden relative">
 
       <div className="container mx-auto px-6 mb-12 text-center relative z-20">
         <span className="text-neon-blue font-mono text-sm tracking-widest mb-4 block uppercase">
@@ -158,16 +155,16 @@ const Testimonials = () => {
         <MobileCarousel />
       </div>
 
-      {/* Desktop: 3-column grid */}
+      {/* Desktop: grid */}
       <div className="container mx-auto px-6 relative z-20 hidden md:block">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonialsData.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: (i % 3) * 0.1 }}
+              transition={{ delay: (i % 4) * 0.1 }}
             >
               <TestimonialCard data={t} />
             </motion.div>
@@ -178,7 +175,8 @@ const Testimonials = () => {
       <div className="text-center mt-14 z-20 relative">
         <a
           href="#pricing"
-          className="inline-flex items-center px-8 py-4 rounded-full bg-white text-bg-900 font-bold hover:bg-neutral-100 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+          className="btn-glow inline-flex items-center px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform"
+          style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
         >
           Join the Next Batch →
         </a>

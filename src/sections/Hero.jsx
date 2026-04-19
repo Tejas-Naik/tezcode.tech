@@ -68,7 +68,13 @@ const FloatingParticles = () => (
 );
 
 const Hero = () => {
-  const [nextClassStartTime] = useState(() => new Date("2026-04-01T12:00:00Z"));
+  const [nextClassStartTime] = useState(() => {
+    // Rolling countdown — always ~3 days from now so it never shows 00:00:00
+    const target = new Date();
+    target.setDate(target.getDate() + 3);
+    target.setHours(12, 0, 0, 0);
+    return target;
+  });
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(nextClassStartTime));
   const videoRef = useRef(null);
 

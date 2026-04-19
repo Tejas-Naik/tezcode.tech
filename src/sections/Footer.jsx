@@ -4,7 +4,7 @@ import { trackEvent } from "../../utils/analytics";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg-900 text-neutral-400 border-t border-white/5 relative overflow-hidden">
+    <footer className="text-neutral-400 border-t border-white/5 relative overflow-hidden">
         {/* Glow effect */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent"></div>
 
@@ -18,7 +18,8 @@ const Footer = () => {
           <a
             href="#pricing"
             onClick={() => trackEvent("hero_cta_click", { source: "footer" })}
-            className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 rounded-full bg-white text-bg-900 font-bold shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition transform hover:scale-105 text-sm md:text-base"
+            className="btn-glow inline-flex items-center px-6 py-3 md:px-8 md:py-4 rounded-full font-bold hover:scale-105 transition transform text-sm md:text-base"
+            style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
           >
             Join the 7-Day Course
           </a>

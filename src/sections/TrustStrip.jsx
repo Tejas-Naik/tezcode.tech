@@ -15,7 +15,7 @@ const stats = [
 
 const TrustStrip = () => {
   return (
-    <div className="border-y border-white/5 bg-bg-900/50 backdrop-blur-sm py-8 sm:py-10 relative overflow-hidden">
+    <div className="border-y border-white/5 backdrop-blur-sm py-8 sm:py-10 relative overflow-hidden">
       {/* Subtle glow */}
       <div className="absolute top-0 left-1/4 w-1/2 h-full bg-neon-blue/5 blur-[50px] pointer-events-none"></div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">

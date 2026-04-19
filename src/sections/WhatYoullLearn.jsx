@@ -31,9 +31,9 @@ const outcomes = [
 
 const WhatYoullLearn = () => {
   return (
-    <section id="learn" className="py-24 bg-bg-900 text-white relative overflow-hidden">
+    <section id="learn" className="py-24 text-white relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-neon-blue/10 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-neon-blue/8 blur-[150px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -60,7 +60,8 @@ const WhatYoullLearn = () => {
               </p>
               <a
                 href="#pricing"
-                className="inline-flex items-center px-7 py-3.5 bg-neon-blue text-bg-900 font-bold rounded-full hover:bg-white transition-all hover:scale-105 shadow-neon-blue"
+                className="btn-glow inline-flex items-center px-7 py-3.5 font-bold rounded-full hover:scale-105 transition-all"
+                style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
               >
                 Start Learning — $49
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -117,9 +117,9 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-bg-900 text-white relative overflow-hidden">
+    <section id="pricing" className="py-20 text-white relative overflow-hidden">
         {/* Ambient Glow */}
-       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neon-purple/20 blur-[120px] rounded-full pointer-events-none"></div>
+       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neon-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <span className="text-neon-blue font-mono text-sm tracking-widest mb-4 block uppercase">
@@ -135,8 +135,8 @@ const Pricing = () => {
           One payment. Live classes. Real projects. Real growth.
         </p>
         {/* Urgency */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-purple/10 border border-neon-purple/30 text-neon-purple text-sm font-semibold mb-12">
-          <span className="w-2 h-2 rounded-full bg-neon-purple animate-pulse"></span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-blue/10 border border-neon-blue/30 text-neon-blue text-sm font-semibold mb-12">
+          <span className="w-2 h-2 rounded-full bg-neon-blue animate-pulse"></span>
           Limited seats for each batch · Next batch starting soon
         </div>
 
@@ -144,16 +144,22 @@ const Pricing = () => {
            {/* Pulsing Gradient Border */}
           <div className="absolute -inset-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
           
-          <div className="relative bg-bg-900 rounded-3xl p-8 border border-white/10 ring-1 ring-white/10 shadow-2xl">
-              <div className="absolute top-0 right-0 -mt-3 -mr-3 bg-neon-purple text-white text-xs font-bold px-3 py-1 rounded-full animate-bounce">
+          <div className="relative rounded-3xl p-8 border border-white/10 ring-1 ring-white/10 shadow-2xl" style={{ background: "rgba(5, 8, 22, 0.85)", backdropFilter: "blur(12px)" }}>
+              <div
+                className="absolute top-0 right-0 -mt-3 -mr-3 text-white text-xs font-bold px-3 py-1 rounded-full animate-bounce"
+                style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
+              >
                   LIMITED TIME
               </div>
 
             <div className="flex justify-between items-center mb-2">
-              <h3 className="text-xl font-bold text-white tracking-wide uppercase text-neutral-400">
+              <h3 className="text-xl font-bold text-white tracking-wide uppercase">
                 7-Day Crash Course
               </h3>
-              <span className="bg-gradient-to-r from-neon-blue to-neon-purple text-bg-900 text-[10px] font-black px-2 py-0.5 rounded-sm uppercase tracking-widest shadow-[0_0_10px_rgba(46,242,255,0.4)]">
+              <span
+                className="text-[10px] font-black px-2 py-0.5 rounded-sm uppercase tracking-widest"
+                style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816", boxShadow: "0 0 10px rgba(0,245,255,0.4)" }}
+              >
                 Best Value
               </span>
             </div>

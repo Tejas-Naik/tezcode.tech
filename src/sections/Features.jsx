@@ -35,9 +35,9 @@ const solutions = [
 
 const Features = () => {
   return (
-    <section id="solution" className="py-20 bg-bg-900 text-white relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neon-purple/20 blur-[120px] rounded-full pointer-events-none"></div>
+    <section id="solution" className="py-20 text-white relative overflow-hidden">
+      {/* Background glow — subtle, consistent with global theme */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neon-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -69,7 +69,7 @@ const Features = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="flex justify-center mb-6">
-                  <div className="bg-bg-900 border border-white/10 p-4 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-white/5 border border-white/10 p-4 rounded-full shadow-inner group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-8 h-8 text-neon-blue group-hover:text-neon-purple transition-colors duration-300" />
                   </div>
                 </div>
@@ -87,7 +87,8 @@ const Features = () => {
         <div className="text-center mt-16">
           <a
             href="#pricing"
-            className="px-8 py-4 bg-neon-blue text-bg-900 font-bold text-lg rounded-full shadow-[0_0_20px_rgba(46,242,255,0.3)] hover:shadow-[0_0_30px_rgba(46,242,255,0.5)] hover:bg-white transition-all transform hover:scale-105"
+            className="btn-glow px-8 py-4 font-bold text-lg rounded-full transition-all transform hover:scale-105"
+            style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
           >
             Start the Course — $49
           </a>

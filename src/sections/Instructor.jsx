@@ -3,15 +3,13 @@ import { trackEvent } from "../../utils/analytics";
 
 const Instructor = () => {
   return (
-    <section id="instructor" className="py-24 bg-bg-900 text-white relative">
+    <section id="instructor" className="py-24 text-white relative">
        {/* Background graphic */}
        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-neon-blue/5 to-transparent pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
         <div className="glass-card p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
-             {/* Decorative grid */}
-             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
           <div className="grid lg:grid-cols-5 gap-12 items-center relative z-10">
             {/* Image */}
@@ -46,7 +44,7 @@ const Instructor = () => {
                   experience building production applications.
                 </p>
                 <p>
-                  I've taught <span className="text-neon-purple font-bold">100+ students</span> from UAE, Saudi Arabia,
+                  I've taught <span className="text-neon-blue font-bold">100+ students</span> from UAE, Saudi Arabia,
                   UK, Netherlands, Bangladesh and more. My focus is always on{" "}
                   <span className="text-white font-semibold">practical learning</span> — real code,
                   real projects, no fluff.

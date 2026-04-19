@@ -16,7 +16,7 @@ const WhatYoullLearn = lazy(() => import("./sections/WhatYoullLearn"));
 const CurriculumJourney = lazy(() => import("./sections/CurriculumJourney")); // 7-Day Roadmap
 const Instructor = lazy(() => import("./sections/Instructor"));
 const Testimonials = lazy(() => import("./sections/Testimonials"));
-const HowItWorks = lazy(() => import("./sections/HowItWorks"));
+const Faq = lazy(() => import("./sections/Faq"));
 const Pricing = lazy(() => import("./sections/Pricing"));
 const FutureHook = lazy(() => import("./sections/FutureHook"));
 const EmailCapture = lazy(() => import("./sections/EmailCapture"));
@@ -32,6 +32,8 @@ const BlogPost = lazy(() => import("./pages/BlogPost"));
 // Inline separator component — glow gradient line between sections
 const Sep = () => <hr className="section-sep" />;
 
+// Optimized funnel order:
+// Hero → Trust → Problem → Solution → Outcomes → Roadmap → Instructor → Testimonials → Pricing → FAQ → FutureHook → EmailCapture → Footer
 const LandingPage = () => (
   <main className="relative overflow-x-hidden">
     <Header />
@@ -51,9 +53,9 @@ const LandingPage = () => (
     <Sep />
     <Testimonials />
     <Sep />
-    <HowItWorks />
-    <Sep />
     <Pricing />
+    <Sep />
+    <Faq />
     <Sep />
     <FutureHook />
     <Sep />

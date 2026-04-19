@@ -13,9 +13,12 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-bg-900 text-white relative">
+    <section id="faq" className="py-20 text-white relative">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="text-neon-blue font-mono text-sm tracking-widest mb-4 block uppercase">
+            // FAQ
+          </span>
           <h3 className="text-3xl md:text-4xl font-black mb-4">
             Frequently Asked <span className="text-transparent bg-clip-text bg-neon-gradient">Questions</span>
           </h3>
@@ -64,8 +67,8 @@ const Faq = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12 bg-white/5 rounded-2xl p-8 border border-white/10 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-neon-purple/20 blur-[80px] rounded-full pointer-events-none"></div>
+        <div className="text-center mt-12 glass-card rounded-2xl p-8 border border-white/10 relative overflow-hidden max-w-3xl mx-auto">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 blur-[80px] rounded-full pointer-events-none"></div>
           <h4 className="text-2xl font-bold mb-3 text-white">Still have questions?</h4>
           <p className="text-lg text-neutral-400 mb-6 max-w-lg mx-auto">
             Get personalized answers from Tejas directly. Parent and student consultations are always free.
@@ -75,7 +78,7 @@ const Faq = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("book_call_click", { source: "faq" })}
-            className="inline-flex items-center px-8 py-4 rounded-full bg-neon-purple text-white font-bold shadow-[0_0_20px_rgba(157,78,221,0.4)] hover:shadow-[0_0_30px_rgba(157,78,221,0.6)] hover:bg-purple-600 transition transform hover:-translate-y-1 relative z-10"
+            className="inline-flex items-center px-8 py-4 rounded-full border border-white/20 text-white font-bold hover:bg-white hover:text-bg-900 transition-all transform hover:-translate-y-1 relative z-10"
           >
             Book a Free 15-Min Call
           </a>

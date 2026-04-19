@@ -33,9 +33,9 @@ const EmailCaptureSection = () => {
   };
 
   return (
-    <section id="email-capture" className="py-24 bg-bg-900 text-white relative overflow-hidden">
+    <section id="email-capture" className="py-24 text-white relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-blue/10 blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-blue/8 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -81,12 +81,13 @@ const EmailCaptureSection = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 px-5 py-3.5 bg-bg-card border border-white/10 rounded-full text-white placeholder-neutral-500 focus:outline-none focus:border-neon-blue/50 focus:ring-1 focus:ring-neon-blue/30 transition-all text-sm"
+                className="flex-1 px-5 py-3.5 bg-white/5 border border-white/10 rounded-full text-white placeholder-neutral-500 focus:outline-none focus:border-neon-blue/50 focus:ring-1 focus:ring-neon-blue/30 transition-all text-sm"
               />
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="px-7 py-3.5 bg-neon-blue text-bg-900 font-bold rounded-full hover:bg-white transition-all hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap text-sm shadow-neon-blue"
+                className="btn-glow px-7 py-3.5 font-bold rounded-full hover:scale-105 transition-all disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap text-sm"
+                style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
               >
                 {status === "loading" ? "Sending..." : "Get Free Guide"}
               </button>

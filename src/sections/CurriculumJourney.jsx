@@ -65,9 +65,15 @@ const DayCard = ({ day, title, description, icon, isLeft, index }) => (
     {/* Spacer for desktop alternating layout */}
     <div className="hidden md:block w-5/12"></div>
 
-    {/* Timeline Circle */}
-    <div className="z-20 flex items-center justify-center bg-neon-blue shadow-neon-blue w-10 h-10 rounded-full shrink-0 absolute left-0 md:left-1/2 md:-ml-5">
-      <span className="font-black text-lg text-bg-900 leading-none">{day}</span>
+    {/* Timeline Circle — glowing */}
+    <div
+      className="z-20 flex items-center justify-center w-10 h-10 rounded-full shrink-0 absolute left-0 md:left-1/2 md:-ml-5"
+      style={{
+        background: "linear-gradient(135deg, #00f5ff, #0066ff)",
+        boxShadow: "0 0 15px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.2)",
+      }}
+    >
+      <span className="font-black text-lg leading-none" style={{ color: "#050816" }}>{day}</span>
     </div>
 
     {/* Card */}
@@ -75,7 +81,7 @@ const DayCard = ({ day, title, description, icon, isLeft, index }) => (
       <div className="flex items-center gap-3 mb-2">
         <span className="text-2xl">{icon}</span>
         <h3 className="font-bold text-white text-lg">
-          <span className="text-neon-purple">Day {day}: </span>
+          <span className="text-neon-blue">Day {day}: </span>
           {title}
         </h3>
       </div>
@@ -86,7 +92,7 @@ const DayCard = ({ day, title, description, icon, isLeft, index }) => (
 
 const CurriculumJourney = () => {
   return (
-    <section className="relative py-24 bg-bg-900 overflow-hidden" id="roadmap">
+    <section className="relative py-24 overflow-hidden" id="roadmap">
       {/* Glow */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[300px] h-[600px] bg-neon-blue/5 blur-[80px] pointer-events-none"></div>
 
@@ -108,10 +114,13 @@ const CurriculumJourney = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Line */}
+          {/* Vertical Glowing Line */}
           <div
-            className="absolute border-white/10 h-full border left-5 md:left-1/2 top-0"
-            style={{ borderWidth: "1px" }}
+            className="absolute h-full left-5 md:left-1/2 top-0 w-[2px]"
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,245,255,0.4), rgba(140,0,255,0.3), rgba(0,245,255,0.1))",
+              boxShadow: "0 0 8px rgba(0,245,255,0.3)",
+            }}
           ></div>
 
           {days.map((d, i) => (
@@ -127,7 +136,8 @@ const CurriculumJourney = () => {
         <div className="text-center mt-12">
           <a
             href="#pricing"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-neon-blue text-bg-900 font-bold rounded-full hover:bg-white transition-all hover:scale-105 shadow-neon-blue"
+            className="btn-glow inline-flex items-center gap-2 px-8 py-4 font-bold rounded-full hover:scale-105 transition-all"
+            style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
           >
             Start Day 1 Today — $49
           </a>

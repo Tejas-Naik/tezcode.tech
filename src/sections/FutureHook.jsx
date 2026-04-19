@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 const FutureHook = () => {
   return (
-    <section id="future" className="py-24 bg-bg-900 text-white relative overflow-hidden">
+    <section id="future" className="py-24 text-white relative overflow-hidden">
       {/* Ambient glows */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-purple/5 to-transparent pointer-events-none"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-purple/15 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-blue/5 to-transparent pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -15,19 +15,19 @@ const FutureHook = () => {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-neon-purple font-mono text-sm tracking-widest mb-4 block uppercase">
+            <span className="text-neon-blue font-mono text-sm tracking-widest mb-4 block uppercase">
               // WHAT'S NEXT
             </span>
             <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
               What Happens{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">
+              <span className="text-transparent bg-clip-text bg-neon-gradient">
                 After 7 Days?
               </span>
             </h2>
 
-            <div className="glass-card rounded-3xl p-10 md:p-14 border border-neon-purple/20 shadow-neon-purple/10 shadow-2xl relative overflow-hidden">
+            <div className="glass-card rounded-3xl p-10 md:p-14 border border-neon-blue/20 relative overflow-hidden" style={{ boxShadow: "0 0 40px rgba(0, 245, 255, 0.06)" }}>
               {/* Decorative code line */}
-              <div className="absolute top-4 left-6 text-xs font-mono text-neon-purple/40">
+              <div className="absolute top-4 left-6 text-xs font-mono text-neon-blue/40">
                 // day_8.py
               </div>
 
@@ -35,7 +35,7 @@ const FutureHook = () => {
                 The 7-Day Python Course is just the beginning. It's the{" "}
                 <span className="text-white font-semibold">first module</span>{" "}
                 of the full{" "}
-                <span className="text-neon-purple font-black text-xl md:text-2xl">
+                <span className="text-neon-blue font-black text-xl md:text-2xl">
                   111 Days of Code Bootcamp
                 </span>{" "}
                 — where you go from beginner to{" "}
@@ -55,7 +55,7 @@ const FutureHook = () => {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="px-4 py-2 rounded-full bg-neon-purple/10 border border-neon-purple/20 text-sm font-medium text-neutral-300"
+                    className="px-4 py-2 rounded-full bg-neon-blue/10 border border-neon-blue/20 text-sm font-medium text-neutral-300"
                   >
                     {item}
                   </span>
@@ -69,7 +69,8 @@ const FutureHook = () => {
 
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neon-purple to-neon-blue text-white font-bold rounded-full hover:opacity-90 transition-all hover:scale-105 shadow-neon-purple/20 shadow-lg"
+                className="btn-glow inline-flex items-center gap-2 px-8 py-4 font-bold rounded-full hover:scale-105 transition-all"
+                style={{ background: "linear-gradient(135deg, #00f5ff, #0066ff)", color: "#050816" }}
               >
                 Start Your Journey — $49
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

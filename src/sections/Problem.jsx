@@ -29,9 +29,9 @@ const problems = [
 
 const Problem = () => {
   return (
-    <section id="problem" className="py-24 bg-bg-900 text-white relative overflow-hidden">
+    <section id="problem" className="py-24 text-white relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-neon-pink/10 blur-[120px] rounded-full pointer-events-none -translate-y-1/2"></div>
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-neon-purple/10 blur-[120px] rounded-full pointer-events-none -translate-y-1/2"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
